@@ -19,8 +19,15 @@
 </div></header>
 <main>
   <h1>המפגשים שלנו</h1>
-  <p class="lead">בחרו את השיעור של היום ועקבו אחרי השלבים. בהצלחה! 🚀</p>
-  <div id="sessions"><p>טוען…</p></div>
+  <p class="lead">בחרו מפגש, היכנסו לשיעור ועקבו אחרי השלבים. בהצלחה! 🚀</p>
+  <div class="searchbar">
+    <input id="q" type="search" placeholder="🔍 חיפוש שיעור לפי שם או מילת מפתח – למשל: לב, רדיו, מנועים" aria-label="חיפוש שיעור" autocomplete="off">
+  </div>
+  <div id="results" aria-live="polite" hidden></div>
+  <div id="browse">
+    <div id="continue"></div>
+    <div id="sessions"><p>טוען…</p></div>
+  </div>
 </main>
 <footer class="site-footer">טכנודע – המוזיאון הישראלי לרפואה ומדע, חדרה · השיעורים מבוססים על <a href="https://microbit.org/projects/make-it-code-it/" target="_blank" rel="noopener">micro:bit Educational Foundation</a> ועל <a href="https://github.com/YahboomTechnology/Tiny-bit" target="_blank" rel="noopener">Yahboom Tiny:bit</a></footer>
 </body>
