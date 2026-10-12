@@ -1,0 +1,312 @@
+# ============================================================
+#  חומרי מדריך – מערכי שיעור טכנודע וקישורים שימושיים
+# ============================================================
+#  המקור: המסמך "קישורים שימושיים רובוטיקה מחצית ראשונה" (microbit.pdf)
+#  והתיקיות ב-Google Drive שמקושרות ממנו.
+#
+#  plans – מערכי השיעור (מופיעים בלשונית "מערכי שיעור" בדף המדריך)
+#    num        – מספר המערך
+#    title      – שם
+#    folder     – קישור לתיקייה ב-Drive
+#    doc        – קישור למסמך המערך
+#    lessons    – מזהי שיעורים מ-lessons.yml שהמערך מתאים להם.
+#                 המערך יוצג גם בדף השיעור (תצוגת מדריך) של כל אחד מהם.
+#    goals, flow, materials, notes – רשימות
+#    links      – קישורים נוספים: { title, url }
+#    files      – קבצים מוכנים (hex וכו׳): { title, url }
+#
+#  useful_links – קישורים שימושיים כלליים: { title, url, note }
+# ============================================================
+
+useful_links:
+  - group: "micro:bit"
+    items:
+      - title: "חלקי רכיב המיקרוביט"
+        url: "https://microbit.org/get-started/features/overview/"
+        note: "אתר המסביר על רכיב המיקרו:ביט – מצוין להצגה במקרן."
+      - title: "MakeCode – סביבת התכנות"
+        url: "https://makecode.microbit.org/"
+        note: "אתר מיקרוביט ליצירת פרויקטים."
+      - title: "אתר micro:bit – פרויקטים מוכנים"
+        url: "https://microbit.org/"
+        note: "הורדת פרויקטים מוכנים (Make it: code it)."
+      - title: "גלריית הבלוקים של MakeCode"
+        url: "https://makecode.microbit.org/block-gallery"
+        note: "הסבר על כל הבלוקים."
+      - title: "סרטון: יכולות הרכיב"
+        url: "https://youtu.be/u2u7UJSRuko"
+        note: "סרטון קצר שמציג מה המיקרוביט יודע לעשות."
+      - title: "שיר איסוף ציוד – \"להחזיר מיקרוביט בבקשה\""
+        url: "https://drive.google.com/file/d/1619yAdQvrhnLm1f3waB61SH6mQiN-F6V/view?usp=drive_link"
+        note: "משמיעים בסוף המפגש בזמן איסוף הציוד."
+  - group: "Tiny:bit"
+    items:
+      - title: "קורס Tiny:bit של Yahboom"
+        url: "https://www.yahboom.net/study/Tiny:bit"
+        note: "קורס של היצרן באנגלית + קישורים שימושיים."
+      - title: "התוסף של Tiny:bit ל-MakeCode"
+        url: "https://github.com/YahboomTechnology/Tiny-bitLib"
+        note: "את הכתובת הזו מדביקים ב-Extensions."
+      - title: "התוסף של שלט ה-IR"
+        url: "https://github.com/YahboomTechnology/Yahboom_IR_V2"
+        note: "לשיעור השלט הרחוק."
+      - title: "קורס MakeCode ל-Tiny:bit של itec"
+        url: "http://wiki.itecedu.co.il/"
+        note: "בעברית, מחייב הרשמה חינם."
+      - title: "כל הקבצים של Tiny:bit ב-GitHub"
+        url: "https://github.com/YahboomTechnology/Tiny-bit"
+        note: "קבצי hex, תמונות קוד ומצגות לכל שיעור."
+  - group: "סימולטורים ועזרים"
+    items:
+      - title: "סימולטור מעגל חשמלי (PhET)"
+        url: "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_iw.html"
+      - title: "סימולטור גלי קול (PhET)"
+        url: "https://phet.colorado.edu/sims/html/sound-waves/latest/sound-waves_all.html"
+      - title: "סימולטור גלי רדיו (PhET)"
+        url: "https://phet.colorado.edu/sims/cheerpj/radio-waves/latest/radio-waves.html?simulation=radio-waves"
+      - title: "תיקיית כל מערכי השיעור ב-Drive"
+        url: "https://drive.google.com/drive/folders/1OsbTjT4-yaMm48n1DNZrDp3aDghR-xW6?usp=drive_link"
+        note: "מפגש 1 – משם אפשר לנווט לשאר התיקיות."
+
+plans:
+  - num: 1
+    title: "היכרות עם תחום הרובוטיקה והמעגל החשמלי"
+    folder: "https://drive.google.com/drive/folders/1OsbTjT4-yaMm48n1DNZrDp3aDghR-xW6?usp=drive_link"
+    doc: "https://drive.google.com/file/d/1mjRWDh6wWfqg0a0Xdsp8gznYE0tKtKeP/view"
+    lessons: [meet-your-microbit]
+    summary: "מכירים את תחום הרובוטיקה ואת הבקר, מודדים מתח בסוללות ובונים מעגלים בטור ובמקביל."
+    goals:
+      - "היכרות עם הבקר micro:bit ויכולותיו הבסיסיות"
+      - "מושגי יסוד בחשמל: מתח (וולט), קטבים, מעגל פתוח/סגור, טור ומקביל, מפסק"
+      - "מדידת מתח בסוללות שונות ברב-מודד"
+      - "הבנה בסיסית של מבנה הסוללה"
+    flow:
+      - "10 ד׳ – פתיחה: מטרות הקורס, מה זו רובוטיקה, הצגת המיקרוביט (תצוגת לדים, ג׳ירוסקופ, רמקול) ואתר microbit.org"
+      - "15 ד׳ – מדידת מתח בסוללות 1.5V, 3V, 9V ברב-מודד; קטבים חיובי ושלילי"
+      - "15 ד׳ – בניית מעגל חשמלי בטור: סוללה, נורת לד וחוטים; מעגל פתוח/סגור"
+      - "20 ד׳ – מעגלים בטור ובמקביל עם מטריצה ומפסק; ההבדל בבהירות"
+    materials: ["חוטי חשמל", "נורות לד", "כבלים זכר-זכר / זכר-נקבה", "סוללות 1.5V, 3V, 9V", "מפסקים", "מטריצות", "רב-מודדים", "איזולירבנד", "micro:bit + כבל USB"]
+    notes:
+      - "לוודא שכל תלמיד מבחין בין חיבור נכון לשגוי"
+      - "להקפיד על בטיחות בעבודה עם סוללות ומד מתח"
+      - "להשאיר זמן לשאלות והתלהבות – זה המפגש הראשון!"
+    links:
+      - { title: "סימולטור מעגל חשמלי (PhET)", url: "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_iw.html" }
+      - { title: "אתר micro:bit", url: "https://microbit.org/" }
+
+  - num: 2
+    title: "הכרת המיקרוביט – יצירת לב"
+    folder: "https://drive.google.com/drive/folders/1-sKQWUfHdDmRSn1khJa4tPUNosNXYqqT?usp=drive_link"
+    doc: "https://drive.google.com/file/d/1nmo7DKaNGCOGyDuxBnV3Uw4q3M9pkY2e/view"
+    lessons: [heart, beating-heart]
+    summary: "חלקי הלוח, חיבור למחשב, העברת קובץ hex ופרויקט ראשון: לב ולב פועם."
+    goals:
+      - "היכרות עם רכיבי המיקרוביט: תצוגת אורות, רמקול, ג׳ירוסקופ"
+      - "חיבור המיקרוביט למחשב וזיהויו ככונן חיצוני"
+      - "העברת קובץ קוד ללוח"
+      - "יצירת פרויקט חדש ב-MakeCode"
+    flow:
+      - "פתיחה – מה זו רובוטיקה, מה זה בקר; הצגת חלקי הרכיב (חיבור USB, נורות לד, כפתורים A+B)"
+      - "התנסות: לב, ואחריו לב פועם"
+      - "חיבור ← כתיבת קוד ← Download ← גרירת קובץ ה-hex לכונן MICROBIT ← הלוח מריץ את הקוד"
+      - "אם נשאר זמן: כל תלמיד פותח תיקייה אישית בכונן G (קורס מיקרוביט)"
+      - "הסבר על חיבור וניתוק זהיר של מקור מתח חיצוני"
+    materials: ["micro:bit + כבל לכל משתתף", "שקיות פסגור", "בית סוללות"]
+    notes:
+      - "לבחור 2 תורנים לחלוקה ואיסוף הציוד"
+      - "לוודא שכל הציוד נאסף בסוף המפגש"
+    links:
+      - { title: "חלקי רכיב המיקרוביט", url: "https://microbit.org/get-started/features/overview/" }
+      - { title: "סרטון חלקי המיקרוביט (Drive)", url: "https://drive.google.com/file/d/1thfP39yX2nquAwNmKrIE-KXME9JwiXoj/view?usp=drive_link" }
+      - { title: "לב – microbit.org", url: "https://microbit.org/projects/make-it-code-it/heart/" }
+      - { title: "לב פועם – microbit.org", url: "https://microbit.org/projects/make-it-code-it/beating-heart/" }
+
+  - num: 3
+    title: "משחק היכרות ויצירת תג שם"
+    folder: "https://drive.google.com/drive/folders/1P_-FTBXTKYrOGCmE_S0zhdKSVJfF2Dhm?usp=drive_link"
+    doc: "https://drive.google.com/file/d/1mw5vbCRaflhhPn_QYId4qvFi7KmUmLN9/view"
+    lessons: [name-badge]
+    summary: "משחק כדור השמות, ואז כל זוג מתכנת תג שם נע ומחבר אותו לבית סוללות."
+    goals:
+      - "חיזוק ההיכרות בין חברי הקבוצה"
+      - "תרגול חיבור המיקרוביט למחשב"
+      - "תכנות תג שם אישי שמוצג על הלדים"
+      - "הבעה עצמית באמצעות טכנולוגיה"
+    flow:
+      - "פתיחה: כדור השמות – זורקים כדור ואומרים את השם שלך, ובסבב הבא את השם של מי שמקבל"
+      - "חזרה קצרה על חלקי הרכיב (USB, לדים, כפתורים)"
+      - "בזוגות: תכנות תג שם"
+      - "חיבור המיקרוביט לבית סוללות"
+      - "משחק שמות עם מוזיקה – מסתובבים וקוראים את התגים; אפשר לקשור את המיקרוביט כשרשרת"
+    materials: ["micro:bit", "בית סוללות + סוללות", "סליל חוט", "גומיות", "כדור"]
+    links:
+      - { title: "תג שם – microbit.org", url: "https://microbit.org/projects/make-it-code-it/name-badge/" }
+
+  - num: 4
+    title: "אמת או שקר והטלת מטבע"
+    folder: "https://drive.google.com/drive/folders/1Qb3ksrSEL4YBgYja_GPa0wMvM1M0a9uh?usp=drive_link"
+    doc: "https://docs.google.com/document/d/1yXuFxcoBD_a0tohSItKoluY-Aybud7y2DDDq2XDqHxg/edit"
+    lessons: [emotion-badge, flashing-emotions]
+    summary: "כפתורי A ו-B ותנאי אם...אז: משחק אמת או שקר בזוגות, ואז הטלת מטבע וניקוד."
+    goals:
+      - "היכרות עם כפתורי A ו-B כאירועים שמפעילים קוד"
+      - "הבנת תנאי לוגי (אם...אז...)"
+      - "יצירת משחק \"אמת או שקר\""
+      - "תרגול מיומנויות חברתיות דרך משחק"
+    flow:
+      - "חזרה קצרה על חלקי המיקרוביט"
+      - "משחק עץ או פלי במטבעות, בזוגות מתחלפים; אחר כך מטבע וירטואלי במחשב"
+      - "היכרות עם כפתורים ובלוקי תנאי ב-MakeCode"
+      - "תכנות משחק אמת או שקר – מה קורה בלחיצה על כל כפתור"
+      - "כל זוג כותב משפט אמת ומשפט שקר, ובן הזוג מנחש בלחיצה; מחליפים זוגות"
+      - "אם נשאר זמן: הטלת מטבע, ואחר כך משתנה \"ניקוד\" וכפתור איפוס"
+    links:
+      - { title: "תג רגשות עם צליל – microbit.org", url: "https://microbit.org/projects/make-it-code-it/sound-emotion-badge/" }
+      - { title: "מטבע וירטואלי", url: "https://www.yo-yoo.co.il/tools/virtualcoin/" }
+      - { title: "מדריך MakeCode: הטלת מטבע", url: "https://makecode.microbit.org/projects/coin-flipper" }
+
+  - num: 5
+    title: "מד צעדים ומפת אוצר"
+    folder: "https://drive.google.com/drive/folders/1crR-6qMhkJl4JjwHLdbdkDLaOLtOFhrE?usp=drive_link"
+    doc: "https://docs.google.com/document/d/1W-V3kLqYWnDa39euK47iuQU5NzJ1QKrQ_GFHYgo2pHY/edit"
+    lessons: [step-counter, compass-bearing, treasure-hunt]
+    summary: "חיישני תנועה ומצפן: בונים מד צעדים, מכינים מפת אוצר עם צעדים וכיוונים ויוצאים למשחק שטח."
+    goals:
+      - "היכרות עם הג׳ירוסקופ והחיישנים במיקרוביט"
+      - "מצפן, רוחות השמיים וכיוונים במעלות"
+      - "תכנות מד צעדים"
+      - "תכנון מפת אוצר שמשלבת מצפן ומד צעדים"
+    flow:
+      - "הסבר קצר: מה זה ג׳ירוסקופ ואיפה משתמשים בו"
+      - "כל קבוצה מתכנתת מד צעדים (אפשר להוסיף כפתור איפוס)"
+      - "מצמידים את המיקרוביט לבית הסוללות ולנעל בגומיות"
+      - "כל קבוצה בונה מפת אוצר עם לפחות 3 תחנות: מספר צעדים + כיוון במעלות"
+      - "משחק שטח: הקבוצות מחליפות מפות ומחפשות את האוצר"
+    materials: ["דפי A4", "עפרונות", "מצפנים", "גומיות", "micro:bit + סוללות"]
+    notes:
+      - "להקפיד על בטיחות בהליכה בשטח פתוח"
+      - "צעדים בקצב רגוע ומדויק"
+    links:
+      - { title: "מד צעדים – microbit.org", url: "https://microbit.org/projects/make-it-code-it/step-counter/" }
+      - { title: "פרויקטים של micro:bit (מצפן ועוד)", url: "https://microbit.org/projects/make-it-code-it/" }
+    files:
+      - { title: "microbit-step-counter.hex", url: "https://drive.google.com/uc?export=download&id=1wI0ew88ivXAVejMpZ6g83lMyXNkrK3GG" }
+
+  - num: 6
+    title: "אבן, נייר ומספריים"
+    folder: "https://drive.google.com/drive/folders/1StlBiiWzi7uWESmGRLDdu736RmOnviYK?usp=drive_link"
+    doc: "https://docs.google.com/document/d/1gE0spnv2tGtyYSLlD9jnabI5HFI9_csJQLAK76z7QwQ/edit"
+    lessons: [rock-paper-scissors, dice]
+    summary: "משתנה אקראי: התנסות קצרה ב-Scratch, ואז משחק אבן נייר ומספריים במיקרוביט."
+    goals:
+      - "הבנת המושג משתנה אקראי (רנדומלי)"
+      - "קישור בין בלוקים בקוד לתוצאה על המסך"
+      - "תכנות משחק אבן, נייר ומספריים"
+      - "פיתוח חשיבה לוגית"
+    flow:
+      - "פתיחה: משתנים מקריים בחיי היומיום (מטבע, קובייה)"
+      - "Scratch: דמות שמשנה תלבושת או פעולה באופן אקראי בכל לחיצה"
+      - "משחק אבן נייר ומספריים נגד בינה מלאכותית"
+      - "MakeCode: משתנה \"בחירה\" שמקבל 1–3; 1 = אבן, 2 = נייר, 3 = מספריים"
+      - "הורדה ללוח, חיבור לסוללות עם גומייה; הרחבה: צלילים, אנימציה, משחק מול חבר"
+    links:
+      - { title: "Scratch", url: "https://scratch.mit.edu" }
+      - { title: "אבן נייר ומספריים נגד AI", url: "https://southscribblecompany.itch.io/rps-ai" }
+    files:
+      - { title: "microbit-Rock-Paper-Scissors.hex (המשחק מוכן)", url: "https://drive.google.com/uc?export=download&id=1e-wQh5k-qRdWI8_3FGxEN--y0ON_X5Qi" }
+
+  - num: 7
+    title: "קול ומוזיקה – מד מחיאות כפיים"
+    folder: "https://drive.google.com/drive/folders/1CHumCFFzEa-m31cClZF4Js9Tb72v5btM?usp=drive_link"
+    doc: "https://docs.google.com/document/d/1uclZ9zHYHQck0yGl4HTrg1IE_FcUZiIvTr-FHrU2VhQ/edit"
+    lessons: [sound-meter, clap-hearts, make-some-noise]
+    summary: "גלי קול, עוצמה ותדר; מד רעש, לבבות במחיאת כף ומוזיקה. דורש micro:bit V2."
+    goals:
+      - "תכונות הקול: עוצמה ותדר"
+      - "חיישן קול (קלט) ורמקול (פלט) במיקרוביט"
+      - "מדידת עוצמת קול בסביבה"
+      - "תכנות שמגיב לקלט: חיישנים, תנאים, הצגת ערכים"
+    flow:
+      - "פתיחה: גלי קול, עוצמה ותדר (הרץ); המחשה במחיאות כפיים; סימולטור גלי קול"
+      - "מראים איפה המיקרופון והרמקול על הלוח"
+      - "מד רעש – מודדים רעש במקומות שונים. משחק: תלמיד מספר בדיחה והמד מראה אם הקהל צחק"
+      - "לבבות במחיאת כף – שקט = פרצוף שמח, רועש = פרצוף עצוב (או להפך)"
+      - "אפשר גם: ריקוד (dance steps), מוזיקה עם בלוקי צלילים, מקליט קול מצחיק"
+      - "אם נשאר זמן: יצירת שיר בבינה מלאכותית ב-Suno"
+    links:
+      - { title: "סימולטור גלי קול (PhET)", url: "https://phet.colorado.edu/sims/html/sound-waves/latest/sound-waves_all.html" }
+      - { title: "הסבר מקיף על גלי קול (למורה)", url: "https://www.gomeh.com/audio_h/sound.html" }
+      - { title: "מד רעש – microbit.org", url: "https://microbit.org/projects/make-it-code-it/sound-meter/" }
+      - { title: "לבבות במחיאת כף – microbit.org", url: "https://microbit.org/projects/make-it-code-it/clap-hearts/" }
+      - { title: "מקליט קול מצחיק – microbit.org", url: "https://microbit.org/projects/make-it-code-it/funny-voice-recorder/" }
+      - { title: "Suno – מוזיקה בבינה מלאכותית", url: "https://suno.com/about" }
+      - { title: "מיקרוביט – קישורים שימושיים (מסמך)", url: "https://drive.google.com/file/d/1fdvNpg7FrgsqAeuUkIvcDd0EV11jSIlH/view" }
+
+  - num: 8
+    title: "טמגוצ׳י – חיית מחמד דיגיטלית"
+    folder: "https://drive.google.com/drive/folders/11UvOEnoTb4rJeMJGij2tB6PTokCrpfvA?usp=drive_link"
+    doc: "https://drive.google.com/file/d/1D1rb98h-J7PG5WEeOL_noi4WlFxl0RYo/view"
+    lessons: [microbit-pet]
+    summary: "מה זה טמגוצ׳י, ואז כל תלמיד מתכנת חיית מחמד שמגיבה לכפתורים ולניעור."
+    goals:
+      - "היכרות עם הטמגוצ׳י – צעצוע דיגיטלי שצריך טיפול"
+      - "קלט ופלט: כפתור = אוכל, ניעור = ליטוף"
+      - "תכנות חיית מחמד אישית"
+      - "חשיבות התגובה בזמן"
+    flow:
+      - "10–15 ד׳ – סרטון \"מה זה טמגוצ׳י?\", שיחה, ומשחק טמגוצ׳י וירטואלי"
+      - "30–40 ד׳ – תכנות: כפתור A = אוכל, כפתור B = משחק, ניעור = ליטוף, ואפשר גם קול/מגע"
+      - "הורדה ללוח וחיבור לבית סוללות עם גומייה"
+      - "סיכום: כל תלמיד מציג מתי החיה שלו שמחה או עצובה"
+    links:
+      - { title: "סרטון: מה זה טמגוצ׳י?", url: "https://youtu.be/LU_kUnOoSb4" }
+      - { title: "טמגוצ׳י וירטואלי – My Little Dragon", url: "https://gameforge.com/he-IL/littlegames/my-little-dragon/" }
+      - { title: "חיית מחמד במיקרוביט – microbit.org", url: "https://microbit.org/projects/make-it-code-it/microbit-pet/" }
+
+  - num: 9
+    title: "גלי רדיו"
+    folder: "https://drive.google.com/drive/folders/1hBgbISWq8jK884lWEFiKWMrhnZKQ-3zO?usp=drive_link"
+    doc: "https://drive.google.com/file/d/1UDi0C3UdvHItR971Nc_ct_piepVCCH6f/view"
+    lessons: [send-a-smile, teleporting-duck]
+    summary: "מה הם גלי רדיו ואיפה משתמשים בהם, ואז שולחים מסרים בין לוחות."
+    goals:
+      - "מה הם גלי רדיו ומה השימושים שלהם"
+      - "העברת מסרים בין לוחות ברדיו"
+      - "השוואה בין סוגי גלים אלקטרומגנטיים"
+      - "עבודת צוות בשליחה וקבלה של מסרים"
+    flow:
+      - "פתיח: \"אתם סוכנים במשימה סודית! איך שולחים מסר בלי חוטים?\""
+      - "רקע: גלי רדיו הם קרינה אלקטרומגנטית, נעים במהירות האור וגם בריק"
+      - "מקרינים את הסרטונים ושולחים לתלמידים את הסימולטור"
+      - "מראים איפה רכיב הרדיו והאנטנה"
+      - "תכנות: שולחים חיוך (בסיסי), ואז שדרו לי סוד (מתקדם, עם תנאים)"
+    notes:
+      - "כל זוג/שלישייה בוחר מספר קבוצה ייחודי בין 1 ל-255"
+      - "לחבר סוללות עם גומייה"
+      - "אם לא מספיקים את הקוד המתקדם – ממשיכים בשיעור הבא"
+    links:
+      - { title: "סרטון: הסבר על גלי רדיו", url: "https://drive.google.com/file/d/1CQQzWtGQFzBEBc8aZsxcA4RUkxuOqtrO/view?usp=sharing" }
+      - { title: "סרטון: כיצד פועל מכשיר רדיו", url: "https://drive.google.com/file/d/1CQCoQ6iNYBEWjlfFbtd8ePLjB_sQv2vM/view?usp=drive_link" }
+      - { title: "סימולטור גלי רדיו (PhET)", url: "https://phet.colorado.edu/sims/cheerpj/radio-waves/latest/radio-waves.html?simulation=radio-waves" }
+      - { title: "רכיבי הרדיו – microbit.org", url: "https://microbit.org/get-started/features/radio-and-pins/#radio" }
+      - { title: "שולחים חיוך – microbit.org", url: "https://microbit.org/projects/make-it-code-it/send-a-smile/" }
+      - { title: "שדרו לי סוד – microbit.org", url: "https://microbit.org/projects/make-it-code-it/tell-me-a-secret/" }
+
+  - num: 10
+    title: "יצירת ריקוד"
+    folder: "https://drive.google.com/drive/folders/1cDiv_MzCnCfeTaxet81hhnMwkP049Pe3?usp=drive_link"
+    doc: "https://docs.google.com/document/d/1yqzHXxghA7sGOIpV_jh2-beDFAgPpo6MBbvaBpr3zGQ/edit"
+    lessons: [dance-steps, jukebox]
+    summary: "מתכנתים ריקוד עם תנועות, צלילים, ספירה לאחור ולולאות – והכיתה כולה רוקדת לפי הקוד."
+    goals:
+      - "תזמון וחזרות (לולאות) בתכנות"
+      - "ריקוד דיגיטלי עם תנועה, צליל ואנימציה"
+      - "יצירתיות וביטוי אישי בקוד"
+      - "עבודה קבוצתית"
+    flow:
+      - "10 ד׳ – מה זה ריקוד דיגיטלי? הצגת קוד הבסיס"
+      - "25–30 ד׳ – התאמה אישית: כיוונים, אנימציות, צלילים, ספירה לאחור, לולאות, קצב"
+      - "15–20 ד׳ – הצגה: כל הכיתה רוקדת יחד לפי הקוד המוצג"
+      - "הרחבה: מתאימים את הריקוד לשיר מוכר"
+    links:
+      - { title: "Dance steps – microbit.org", url: "https://microbit.org/projects/make-it-code-it/dance-steps/" }

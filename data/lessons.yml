@@ -11,7 +11,15 @@
 #    student    – intro, goal, concept, steps (רשימה), tip, challenge
 #    guide      – duration, objectives, materials, prep, flow, common_mistakes, extension
 #    images     – תמונות קוד (קישורים)
-#    links      – source (השיעור המקורי), makecode
+#    links      – source  : השיעור המקורי
+#                 makecode: קישור שיתוף של MakeCode שפותח את הקוד המוכן,
+#                           למשל "https://makecode.microbit.org/#pub:_dkrYv67Ui9jW"
+#                           (ב-MakeCode: Share ← Copy). בלי קישור כזה הכפתור
+#                           פותח את MakeCode ריק.
+#                 hex     : קישור לקובץ hex להורדה. אפשר גם כמה קבצים:
+#                           - { title: "V2", url: "..." }
+#                           בשיעורים מ-microbit.org (make-it-code-it) הקישור
+#                           נבנה אוטומטית אם לא כתבתם hex.
 #  עיצוב בתוך טקסט:  **מודגש**   ו-  [[שם בלוק]]
 #  שיעור שלא משובץ ב-schedule.yml מופיע אוטומטית במאגר השיעורים הנוסף.
 # ============================================================
@@ -898,6 +906,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/1.LED%20light/LED%20light.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/03.Light%20of%20Tiny%20bit/1.LED%20light"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/1.LED%20light/microbit-LED-light.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-breathing-light
@@ -926,6 +935,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/5.Breathing%20light/Breathing%20light.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/03.Light%20of%20Tiny%20bit/5.Breathing%20light"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/5.Breathing%20light/microbit-Breathing-light.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-rgb-searching-light
@@ -953,6 +963,9 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/2.RGB%20Searching%20light/RGB-light-1.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/03.Light%20of%20Tiny%20bit/2.RGB%20Searching%20light"
+      hex:
+        - { title: "microbit-RGB-light-1.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/2.RGB%20Searching%20light/microbit-RGB-light-1.hex" }
+        - { title: "microbit-RGB-light-2.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/2.RGB%20Searching%20light/microbit-RGB-light-2.hex" }
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-rgb-exchange
@@ -978,6 +991,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/3.RGB%20light%20exchange%20lighting/RGB%20light%20exchange%20lighting_1.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/03.Light%20of%20Tiny%20bit/3.RGB%20light%20exchange%20lighting"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/3.RGB%20light%20exchange%20lighting/microbit-RGB-light-exchange-lighting.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-internal-music
@@ -1003,6 +1017,9 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/04.Singing%20with%20Tiny%20bit/1.Playing%20internal%20music/Playing%20internal%20music.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/04.Singing%20with%20Tiny%20bit/1.Playing%20internal%20music"
+      hex:
+        - { title: "microbit-Playing-internal-musicV2.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/04.Singing%20with%20Tiny%20bit/1.Playing%20internal%20music/microbit-Playing-internal-musicV2.hex" }
+        - { title: "microbit-Playing-internal-musicV1.5.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/04.Singing%20with%20Tiny%20bit/1.Playing%20internal%20music/microbit-Playing-internal-musicV1.5.hex" }
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-merry-christmas
@@ -1029,6 +1046,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/04.Singing%20with%20Tiny%20bit/2.Playing%20MerryChristmas%20with%20light/Play%20Merry%20Christmas%20with%20lights.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/04.Singing%20with%20Tiny%20bit/2.Playing%20MerryChristmas%20with%20light"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/04.Singing%20with%20Tiny%20bit/2.Playing%20MerryChristmas%20with%20light/microbit-Play-Merry-Christmas-with-lights.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-advance
@@ -1056,6 +1074,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/05.Running%20with%20Tiny%20bit/1.Advance/Advance.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/05.Running%20with%20Tiny%20bit/1.Advance"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/05.Running%20with%20Tiny%20bit/1.Advance/microbit-Advance.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-carrun
@@ -1081,6 +1100,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/05.Running%20with%20Tiny%20bit/2.CarRun/CarRun_1.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/05.Running%20with%20Tiny%20bit/2.CarRun"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/05.Running%20with%20Tiny%20bit/2.CarRun/microbit-CarRun.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-control-speed
@@ -1108,6 +1128,9 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/05.Running%20with%20Tiny%20bit/3.Control%20speed/Control%20speed-1.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/05.Running%20with%20Tiny%20bit/3.Control%20speed"
+      hex:
+        - { title: "microbit-Control-speed-1.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/05.Running%20with%20Tiny%20bit/3.Control%20speed/microbit-Control-speed-1.hex" }
+        - { title: "microbit-Control-speed-2.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/05.Running%20with%20Tiny%20bit/3.Control%20speed/microbit-Control-speed-2.hex" }
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-dancer
@@ -1133,6 +1156,7 @@ lessons:
       extension: "מופע ריקודים בסוף השיעור."
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/05.Running%20with%20Tiny%20bit/4.Dancer"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/05.Running%20with%20Tiny%20bit/4.Dancer/microbit-Dancer.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-route-plan
@@ -1159,6 +1183,7 @@ lessons:
       common_mistakes: ["כיול על משטח אחד ובדיקה על משטח אחר", "סוללה נחלשת משנה את זמני הסיבוב"]
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/05.Running%20with%20Tiny%20bit/5.Route%20plan"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/05.Running%20with%20Tiny%20bit/5.Route%20plan/microbit-Route-plan.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-measuring-worker
@@ -1186,6 +1211,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/1.Measuring%20worker/Measuring%20worker.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/1.Measuring%20worker"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/1.Measuring%20worker/microbit-Measuring-worker.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-distance-light
@@ -1210,6 +1236,9 @@ lessons:
       extension: "חיישן חנייה: צפצוף שמאיץ ככל שמתקרבים."
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/2.Distance%20control%20light"
+      hex:
+        - { title: "microbit-Distance-control-light-color.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/2.Distance%20control%20light/microbit-Distance-control-light-color.hex" }
+        - { title: "microbit-Distance-control-light.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/2.Distance%20control%20light/microbit-Distance-control-light.hex" }
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-obstacle-avoidance
@@ -1236,6 +1265,9 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/3.Ultrasonic%20obstacle%20avoidance/Ultrasonic-avoid.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/3.Ultrasonic%20obstacle%20avoidance"
+      hex:
+        - { title: "microbit-Ultrasonic-avoid-with-light.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/3.Ultrasonic%20obstacle%20avoidance/microbit-Ultrasonic-avoid-with-light.hex" }
+        - { title: "microbit-Ultrasonic-avoid.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/3.Ultrasonic%20obstacle%20avoidance/microbit-Ultrasonic-avoid.hex" }
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-coward
@@ -1262,6 +1294,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/9.Coward/Coward.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/9.Coward"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/9.Coward/microbit-coward.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-tracking
@@ -1292,6 +1325,9 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/7.Tracking/Tracking.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/7.Tracking"
+      hex:
+        - { title: "microbit-Tracking-with-light.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/7.Tracking/microbit-Tracking-with-light.hex" }
+        - { title: "microbit-Tracking.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/7.Tracking/microbit-Tracking.hex" }
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-ir-control
@@ -1320,6 +1356,9 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/07.Interacting%20with%20Tiny%20bit/1.IR%20Control/V2/IR%20Control.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/07.Interacting%20with%20Tiny%20bit/1.IR%20Control"
+      hex:
+        - { title: "microbit-Tinybit-IR-Control-V2.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/07.Interacting%20with%20Tiny%20bit/1.IR%20Control/V2/microbit-Tinybit-IR-Control-V2.hex" }
+        - { title: "microbit-IR-controlV1.5.hex", url: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/07.Interacting%20with%20Tiny%20bit/1.IR%20Control/V1.5/microbit-IR-controlV1.5.hex" }
       makecode: "https://makecode.microbit.org/"
 
   - id: tb-voice-control-light
@@ -1347,6 +1386,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/8.Voice%20control%20light/Voice%20control%20light.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/8.Voice%20control%20light"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/8.Voice%20control%20light/microbit-Voice-control-light.hex"
       makecode: "https://makecode.microbit.org/"
 
   - id: project-final
@@ -1394,6 +1434,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/4.LED%20light%20exchange%20lighting/LED%20light%20exchange%20lighting_1.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/03.Light%20of%20Tiny%20bit/4.LED%20light%20exchange%20lighting"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/4.LED%20light%20exchange%20lighting/microbit-LED-light-exchange-lighting.hex"
 
   - id: tb-magic-hand
     title: "Tiny:bit – היד הקסומה"
@@ -1406,6 +1447,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/4.Magic%20hand/Magic%20hand.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/4.Magic%20hand"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/4.Magic%20hand/microbit-Magic-hand.hex"
 
   - id: tb-radar-detector
     title: "Tiny:bit – גלאי מכ״ם"
@@ -1418,6 +1460,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/5.Radar%20detector/Radar%20detector.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/5.Radar%20detector"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/5.Radar%20detector/microbit-Radar-detector.hex"
 
   - id: tb-black-piano
     title: "Tiny:bit – פסנתר שחור"
@@ -1430,6 +1473,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/6.Playing%20black%20paino/Playing%20black%20paino.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/6.Playing%20black%20paino"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/6.Playing%20black%20paino/microbit-Playing-black-paino.hex"
 
   - id: tb-musical-rhythm
     title: "Tiny:bit – קצב מוזיקלי"
@@ -1442,6 +1486,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/10.Musical%20rhythm/Musical%20rhythm.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/10.Musical%20rhythm"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/10.Musical%20rhythm/microbit-Musical-rhythm.hex"
 
   - id: tb-listener
     title: "Tiny:bit – המקשיב"
@@ -1454,6 +1499,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/11.Listener/Listener.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/11.Listener"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/11.Listener/microbit-Listener.hex"
 
   - id: tb-wobble
     title: "Tiny:bit – מתנדנד במגע"
@@ -1466,6 +1512,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/12.Wobble%20when%20touch/Wobble%20when%20touch.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/12.Wobble%20when%20touch"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/12.Wobble%20when%20touch/microbit-Wobble-when-touch.hex"
 
   - id: tb-spinning-top
     title: "Tiny:bit – סביבון"
@@ -1478,6 +1525,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/13.Spinning%20top/Spinning%20top.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/13.Spinning%20top"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/13.Spinning%20top/microbit-Spinning-top.hex"
 
   - id: tb-frog-beating
     title: "Tiny:bit – צפרדע קופצת"
@@ -1490,6 +1538,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/14.Frog%20beating/Frog%20beating.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/14.Frog%20beating"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/14.Frog%20beating/microbit-Frog-beating.hex"
 
   - id: tb-adventure-car
     title: "Tiny:bit – מכונית הרפתקאות"
@@ -1502,6 +1551,7 @@ lessons:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/15.Adventure%20car/Adventure%20car_1.png"
     links:
       source: "https://github.com/YahboomTechnology/Tiny-bit/tree/master/06.Playing%20with%20Tiny%20bit/15.Adventure%20car"
+      hex: "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/06.Playing%20with%20Tiny%20bit/15.Adventure%20car/microbit-Adventure-car.hex"
 
   - id: tb-bluetooth
     title: "Tiny:bit – שליטה מהטלפון (בלוטות׳)"
@@ -1542,7 +1592,10 @@ lessons:
     source: microbit
     level: beginner
     summary: "פרצופים מצחיקים בלחיצות כפתורים."
-    links: { source: "https://microbit.org/projects/make-it-code-it/get-silly/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/get-silly/"
+      makecode: "https://makecode.microbit.org/#pub:_dkrYv67Ui9jW"
+      hex: "https://downloads.microbit.org/downloads/get-silly-makecode.hex"
 
   - id: shining-sunbeams
     title: "קרני שמש זוהרות"
@@ -1755,3 +1808,37 @@ lessons:
     level: intermediate
     summary: "מאמנים מודל לזהות תנועות שמדליקות אור."
     links: { source: "https://microbit.org/projects/make-it-code-it/ai-light-switch/" }
+
+  - id: sound-emotion-badge
+    title: "תג רגשות עם צליל"
+    source: microbit
+    level: beginner
+    needs_v2: true
+    concepts: [כפתורים, צלילים, אירועים]
+    summary: "תג רגשות שמציג פרצוף ומשמיע צליל מתאים בכל לחיצה על כפתור."
+    links: { source: "https://microbit.org/projects/make-it-code-it/sound-emotion-badge/" }
+
+  - id: tell-me-a-secret
+    title: "שדרו לי סוד"
+    source: microbit
+    level: intermediate
+    concepts: [רדיו, תנאים]
+    summary: "שולחים מסרים סודיים ברדיו בין לוחות – המשך מתקדם לשולחים חיוך."
+    links: { source: "https://microbit.org/projects/make-it-code-it/tell-me-a-secret/" }
+
+  - id: dance-steps
+    title: "צעדי ריקוד"
+    source: microbit
+    level: beginner
+    concepts: [לולאה, תזמון, צלילים]
+    summary: "המיקרוביט מראה צעדי ריקוד עם ספירה לאחור, צלילים וקצב – וכל הכיתה רוקדת לפי הקוד."
+    student:
+      goal: "נתכנת ריקוד: המיקרוביט יראה לכולם איזה צעד לעשות ומתי."
+      steps:
+        - "התחילו בספירה לאחור: [[show number]] 3, 2, 1."
+        - "לכל צעד בחרו תמונה – חץ ימינה, חץ שמאלה, מחיאת כף – עם [[show arrow]] או [[show leds]]."
+        - "הוסיפו צליל לכל צעד עם [[play tone]]."
+        - "שימו את הצעדים בתוך [[repeat]] כדי שהריקוד יחזור כמה פעמים."
+        - "שנו את [[pause (ms)]] כדי לשלוט בקצב."
+      challenge: "התאימו את הריקוד לשיר שאתם אוהבים."
+    links: { source: "https://microbit.org/projects/make-it-code-it/dance-steps/" }

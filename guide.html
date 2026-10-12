@@ -19,30 +19,46 @@
 </div></header>
 <main>
   <h1>דף המדריך</h1>
-  <p class="lead">סדר המפגשים נקבע בקובץ <span class="block-name">data/schedule.yml</span>. שיעורים שלא שובצו מופיעים במאגר.</p>
-  <div class="tabs" role="tablist">
-    <button role="tab" aria-selected="true" data-tab="tab-sessions">28 המפגשים</button>
-    <button role="tab" aria-selected="false" data-tab="tab-bank">מאגר שיעורים נוסף</button>
+  <p class="lead">בחרו מפגש ← היכנסו לשיעור ← שם תמצאו את דף התלמיד, הערות למדריך ומערך השיעור של טכנודע.</p>
+  <div class="searchbar">
+    <input id="q" type="search" placeholder="🔍 חיפוש בכל השיעורים – שם, מושג, ציוד, מערך שיעור…" aria-label="חיפוש שיעור" autocomplete="off">
   </div>
-  <section id="tab-sessions"><div id="sessions"><p>טוען…</p></div></section>
-  <section id="tab-bank" hidden>
-    <div class="filters">
-      <select id="f-source" aria-label="מקור">
-        <option value="">כל המקורות</option>
-        <option value="microbit">micro:bit</option>
-        <option value="tinybit">Tiny:bit</option>
-      </select>
-      <select id="f-level" aria-label="רמה">
-        <option value="">כל הרמות</option>
-        <option value="beginner">מתחילים</option>
-        <option value="intermediate">בינוני</option>
-        <option value="advanced">מתקדם</option>
-      </select>
-      <input id="f-search" type="search" placeholder="חיפוש…" aria-label="חיפוש">
-      <span id="bank-count" class="tag"></span>
+  <div id="results" aria-live="polite" hidden></div>
+  <div id="browse">
+    <div id="continue"></div>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="tab-sessions">28 המפגשים</button>
+      <button role="tab" aria-selected="false" data-tab="tab-plans">מערכי שיעור טכנודע</button>
+      <button role="tab" aria-selected="false" data-tab="tab-links">קישורים שימושיים</button>
+      <button role="tab" aria-selected="false" data-tab="tab-bank">מאגר שיעורים נוסף</button>
     </div>
-    <div id="bank" class="bank"></div>
-  </section>
+    <section id="tab-sessions">
+      <p class="muted">סדר המפגשים נקבע בקובץ <span class="block-name">data/schedule.yml</span>.</p>
+      <div id="sessions"><p>טוען…</p></div>
+    </section>
+    <section id="tab-plans" hidden>
+      <p class="muted">מערכי השיעור מתוך "קישורים שימושיים רובוטיקה – מחצית ראשונה". לחצו על מערך כדי לפתוח אותו. הנתונים בקובץ <span class="block-name">data/teacher.yml</span>.</p>
+      <div id="plans"></div>
+    </section>
+    <section id="tab-links" hidden><div id="useful"></div></section>
+    <section id="tab-bank" hidden>
+      <div class="filters">
+        <select id="f-source" aria-label="מקור">
+          <option value="">כל המקורות</option>
+          <option value="microbit">micro:bit</option>
+          <option value="tinybit">Tiny:bit</option>
+        </select>
+        <select id="f-level" aria-label="רמה">
+          <option value="">כל הרמות</option>
+          <option value="beginner">מתחילים</option>
+          <option value="intermediate">בינוני</option>
+          <option value="advanced">מתקדם</option>
+        </select>
+        <span id="bank-count" class="tag"></span>
+      </div>
+      <div id="bank" class="bank"></div>
+    </section>
+  </div>
 </main>
 <footer class="site-footer">טכנודע – המוזיאון הישראלי לרפואה ומדע, חדרה · השיעורים מבוססים על <a href="https://microbit.org/projects/make-it-code-it/" target="_blank" rel="noopener">micro:bit Educational Foundation</a> ועל <a href="https://github.com/YahboomTechnology/Tiny-bit" target="_blank" rel="noopener">Yahboom Tiny:bit</a></footer>
 </body>
