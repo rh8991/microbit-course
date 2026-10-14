@@ -11,7 +11,8 @@
 #    student    – intro, goal, concept, steps (רשימה), tip, challenge
 #    guide      – duration, objectives, materials, prep, flow, common_mistakes, extension
 #    images     – תמונות קוד (קישורים)
-#    links      – source (השיעור המקורי), makecode
+#    links      – source (השיעור המקורי), makecode (קישור כללי)
+#                 code – רשימת תוכניות: label (רשות, כשיש כמה), makecode (#pub), hex
 #  עיצוב בתוך טקסט:  **מודגש**   ו-  [[שם בלוק]]
 #  שיעור שלא משובץ ב-schedule.yml מופיע אוטומטית במאגר השיעורים הנוסף.
 # ============================================================
@@ -36,10 +37,10 @@ lessons:
         - "הסתכלו על הלוח ומצאו: 25 הנורות (LED), כפתור A, כפתור B, ושקע ה-USB."
         - "הפכו את הלוח. מצאו את המעבד ואת החיישנים – כתוב עליהם באנגלית."
         - "פתחו את MakeCode בכתובת makecode.microbit.org ולחצו על **פרויקט חדש**."
-        - "גררו את הבלוק [[show string]] לתוך [[on start]] וכתבו בו את השם שלכם."
+        - "גררו את הבלוק [[הצג מחרוזת]] לתוך [[כאשר מתחיל]] וכתבו בו את השם שלכם."
         - "בדקו בסימולטור (המיקרוביט שעל המסך) שהשם זז."
-        - "חברו את הלוח בכבל USB, לחצו **Download** ושמרו את הקובץ על הכונן MICROBIT."
-      tip: "אפשר להחליף את שפת MakeCode לעברית: גלגל השיניים ⚙️ ← Language. אבל בדפים שלנו שמות הבלוקים כתובים באנגלית."
+        - "חברו את הלוח בכבל USB, לחצו **הורדה** ושמרו את הקובץ על הכונן MICROBIT."
+      tip: "הכפתורים באתר פותחים את MakeCode בעברית, ושמות הבלוקים בדפים שלנו כתובים כמו שהם מופיעים שם. אם MakeCode נפתח באנגלית: גלגל השיניים ⚙️ ← Language ← עברית."
       challenge: "גרמו לשם שלכם להופיע, ואחריו סמיילי 🙂."
     guide:
       duration: "45 דקות"
@@ -60,7 +61,9 @@ lessons:
       extension: "לגלות מה עושה כפתור ה-Reset בגב הלוח."
     links:
       source: "https://microbit.org/projects/make-it-code-it/meet-your-microbit/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_95o2F2hd3eJp"
+          hex: "https://downloads.microbit.org/downloads/meet-your-micro-bit-makecode.hex"
 
   - id: heart
     title: "לב"
@@ -72,25 +75,27 @@ lessons:
       goal: "נגרום ללב להופיע על מסך הנורות של המיקרוביט."
       concept: "**אייקון** הוא ציור מוכן מראש שהמיקרוביט יודע להציג."
       steps:
-        - "בקטגוריה **Basic** מצאו את הבלוק [[show icon]]."
-        - "גררו אותו לתוך [[on start]]."
+        - "בקטגוריה **בסיס** מצאו את הבלוק [[הצג את הסמל]]."
+        - "גררו אותו לתוך [[כאשר מתחיל]]."
         - "בחרו בתפריט את ציור הלב ❤️."
         - "בדקו בסימולטור והעבירו ללוח."
-      tip: "הבלוק [[on start]] רץ פעם אחת בלבד – כשהלוח נדלק."
-      challenge: "השתמשו בבלוק [[show leds]] וציירו לב משלכם – אולי לב קטן או לב שבור?"
+      tip: "הבלוק [[כאשר מתחיל]] רץ פעם אחת בלבד – כשהלוח נדלק."
+      challenge: "השתמשו בבלוק [[הצג נוריות לד]] וציירו לב משלכם – אולי לב קטן או לב שבור?"
     guide:
       duration: "30 דקות"
-      objectives: ["שימוש בבלוק תצוגה", "הבנת on start"]
+      objectives: ["שימוש בבלוק תצוגה", "הבנת [[כאשר מתחיל]]"]
       materials: ["micro:bit + כבל USB", "סוללות (לא חובה)"]
       flow:
         - "הדגמה קצרה על המקרן"
         - "עבודה עצמית"
         - "חיבור סוללה – הלב נשאר גם בלי מחשב!"
-      common_mistakes: ["בלוק שנשאר מחוץ ל-on start (מופיע אפור ולא רץ)"]
-      extension: "לצייר 3 אייקונים שונים בזה אחר זה עם show leds."
+      common_mistakes: ["בלוק שנשאר מחוץ לבלוק [[כאשר מתחיל]] (מופיע אפור ולא רץ)"]
+      extension: "לצייר 3 אייקונים שונים בזה אחר זה עם הצג נוריות לד."
     links:
       source: "https://microbit.org/projects/make-it-code-it/heart/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_1M2V0eiFb7jJ"
+          hex: "https://downloads.microbit.org/downloads/heart-hearts-makecode.hex"
 
   - id: beating-heart
     title: "לב פועם"
@@ -100,27 +105,29 @@ lessons:
     summary: "לב גדול ולב קטן מתחלפים בלולאה ויוצרים לב פועם."
     student:
       goal: "נגרום ללב לפעום – גדול, קטן, גדול, קטן... בלי להפסיק."
-      concept: "**לולאה** (forever) חוזרת על הפקודות שוב ושוב, לנצח. כשתמונות מתחלפות מהר נוצרת **אנימציה**."
+      concept: "**לולאה** (לעולמים) חוזרת על הפקודות שוב ושוב, לנצח. כשתמונות מתחלפות מהר נוצרת **אנימציה**."
       steps:
-        - "גררו לתוך [[forever]] את הבלוק [[show icon]] ובחרו לב גדול."
-        - "הוסיפו מתחתיו עוד [[show icon]] ובחרו לב קטן."
+        - "גררו לתוך [[לעולמים]] את הבלוק [[הצג את הסמל]] ובחרו לב גדול."
+        - "הוסיפו מתחתיו עוד [[הצג את הסמל]] ובחרו לב קטן."
         - "צפו בסימולטור – הלב פועם!"
         - "העבירו ללוח."
-      tip: "רוצים פעימה מהירה או איטית? הוסיפו [[pause (ms)]] בין הלבבות. 1000 מילישניות = שנייה אחת."
+      tip: "רוצים פעימה מהירה או איטית? הוסיפו [[השהה (ms)]] בין הלבבות. 1000 מילישניות = שנייה אחת."
       challenge: "גרמו ללב לפעום כמו לב של מישהו שרץ – מהר מאוד!"
     guide:
       duration: "45 דקות"
-      objectives: ["הבנת לולאה אינסופית", "תזמון עם pause"]
+      objectives: ["הבנת לולאה אינסופית", "תזמון עם [[השהה (ms)]]"]
       materials: ["micro:bit + כבל USB"]
       flow:
         - "שאלה: איך עושים סרט מצויר? (הרבה תמונות מהר)"
         - "בניית הלב הפועם"
-        - "ניסוי: מה קורה כשמשנים את ה-pause?"
-      common_mistakes: ["הכנסת הבלוקים ל-on start ולא ל-forever – הלב פועם פעם אחת בלבד"]
+        - "ניסוי: מה קורה כשמשנים את זמן ההשהיה?"
+      common_mistakes: ["הכנסת הבלוקים ל-[[כאשר מתחיל]] ולא ל-[[לעולמים]] – הלב פועם פעם אחת בלבד"]
       extension: "למדוד דופק אמיתי בדקה ולהתאים את מהירות הפעימה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/beating-heart/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_AUiYbFHgp6wK"
+          hex: "https://downloads.microbit.org/downloads/beating-heart-makecode.hex"
 
   - id: animated-animals
     title: "חיות מונפשות"
@@ -132,9 +139,9 @@ lessons:
       goal: "נצייר חיה שזזה – למשל ברווז שפותח מקור או ארנב שמזיז אוזניים."
       steps:
         - "בחרו חיה. חשבו מה בה זז."
-        - "בתוך [[forever]] שימו שני בלוקים [[show leds]]."
+        - "בתוך [[לעולמים]] שימו שני בלוקים [[הצג נוריות לד]]."
         - "בראשון ציירו את החיה, ובשני את אותה חיה עם שינוי קטן."
-        - "הוסיפו [[pause (ms)]] כדי לשלוט במהירות."
+        - "הוסיפו [[השהה (ms)]] כדי לשלוט במהירות."
       tip: "השינוי בין התמונות צריך להיות קטן – ככה התנועה נראית חלקה."
       challenge: "הוסיפו תמונה שלישית ורביעית – אנימציה ארוכה יותר!"
     guide:
@@ -146,7 +153,9 @@ lessons:
       extension: "חיה שמשנה כיוון כשלוחצים על כפתור."
     links:
       source: "https://microbit.org/projects/make-it-code-it/animated-animals/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_J9rK89hgJJRV"
+          hex: "https://downloads.microbit.org/downloads/animated-animals-makecode.hex"
 
   - id: emotion-badge
     title: "תג רגשות"
@@ -156,14 +165,14 @@ lessons:
     summary: "לחיצה על A מציגה פרצוף שמח, לחיצה על B פרצוף עצוב."
     student:
       goal: "נבנה תג שמראה לכולם איך אנחנו מרגישים היום."
-      concept: "**אירוע** הוא משהו שקורה – למשל לחיצה על כפתור. הקוד שבתוך [[on button A pressed]] רץ רק כשלוחצים."
+      concept: "**אירוע** הוא משהו שקורה – למשל לחיצה על כפתור. הקוד שבתוך [[כאשר כפתור A לחוץ]] רץ רק כשלוחצים."
       steps:
-        - "מקטגוריית **Input** גררו [[on button A pressed]]."
-        - "בתוכו שימו [[show icon]] עם פרצוף שמח 😀."
-        - "גררו עוד [[on button A pressed]] ושנו את A ל-B."
+        - "מקטגוריית **קלט** גררו [[כאשר כפתור A לחוץ]]."
+        - "בתוכו שימו [[הצג את הסמל]] עם פרצוף שמח 😀."
+        - "גררו עוד [[כאשר כפתור A לחוץ]] ושנו את A ל-B."
         - "בתוכו שימו פרצוף עצוב 🙁."
         - "בדקו בסימולטור – לחצו A ואז B."
-      tip: "כדי לנקות את המסך יש את הבלוק [[clear screen]] בקטגוריה Basic ← more."
+      tip: "כדי לנקות את המסך יש את הבלוק [[נקה מסך]] בקטגוריה בסיס ← עוד."
       challenge: "הוסיפו אירוע של לחיצה על A+B ביחד, שמציג פרצוף מופתע."
     guide:
       duration: "45 דקות"
@@ -171,10 +180,12 @@ lessons:
       materials: ["micro:bit", "סוללות", "סקוטש או חוט כדי לענוד את התג (לא חובה)"]
       flow: ["שיחה: איך מראים רגשות בלי מילים?", "בניית התג", "סבב: כל אחד מציג את הרגש שלו"]
       common_mistakes: ["שני אירועים עם אותו כפתור – רק אחד יעבוד"]
-      extension: "לצייר פרצופים עם show leds במקום האייקונים המוכנים."
+      extension: "לצייר פרצופים עם הצג נוריות לד במקום האייקונים המוכנים."
     links:
       source: "https://microbit.org/projects/make-it-code-it/emotion-badge/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_d4aPaHUrmcX4"
+          hex: "https://downloads.microbit.org/downloads/emotion-badge-makecode.hex"
 
   - id: flashing-emotions
     title: "רגשות מהבהבים"
@@ -185,21 +196,23 @@ lessons:
     student:
       goal: "נשדרג את תג הרגשות: הפרצוף יהבהב, כדי שכולם ישימו לב."
       steps:
-        - "בתוך [[on button A pressed]] שימו [[show icon]] עם פרצוף שמח."
-        - "מתחתיו [[pause (ms)]] של 500 ואז [[clear screen]] ועוד [[pause (ms)]]."
-        - "כדי שזה יקרה כמה פעמים – עטפו הכול בבלוק [[repeat 4 times]] מקטגוריית Loops."
+        - "בתוך [[כאשר כפתור A לחוץ]] שימו [[הצג את הסמל]] עם פרצוף שמח."
+        - "מתחתיו [[השהה (ms)]] של 500 ואז [[נקה מסך]] ועוד [[השהה (ms)]]."
+        - "כדי שזה יקרה כמה פעמים – עטפו הכול בבלוק [[חזור 4 פעמים]] מקטגוריית לולאות."
         - "עשו אותו דבר לכפתור B עם פרצוף עצוב."
-      tip: "[[repeat]] חוזר מספר פעמים שאתם בוחרים, ו-[[forever]] חוזר בלי סוף."
+      tip: "[[חזור]] חוזר מספר פעמים שאתם בוחרים, ו-[[לעולמים]] חוזר בלי סוף."
       challenge: "גרמו לפרצוף להבהב מהר יותר ויותר."
     guide:
       duration: "45 דקות"
-      objectives: ["לולאה עם מספר חזרות (repeat)", "השוואה בין repeat ל-forever"]
+      objectives: ["לולאה עם מספר חזרות ([[חזור]])", "השוואה בין [[חזור]] ל-[[לעולמים]]"]
       materials: ["micro:bit"]
-      common_mistakes: ["שכחת pause אחרי clear screen – לא רואים הבהוב"]
+      common_mistakes: ["שכחת [[השהה (ms)]] אחרי [[נקה מסך]] – לא רואים הבהוב"]
       extension: "הבהוב במהירות שונה לכל רגש."
     links:
       source: "https://microbit.org/projects/make-it-code-it/flashing-emotions/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_2DRXqjK1dc3R"
+          hex: "https://downloads.microbit.org/downloads/flashing-emotions-makecode.hex"
 
   - id: name-badge
     title: "תג שם"
@@ -210,11 +223,11 @@ lessons:
     student:
       goal: "נבנה תג שם שגולל את השם שלנו כל הזמן."
       steps:
-        - "גררו [[show string]] לתוך [[forever]]."
+        - "גררו [[הצג מחרוזת]] לתוך [[לעולמים]]."
         - "כתבו את השם שלכם באותיות באנגלית (המיקרוביט לא מכיר אותיות בעברית)."
         - "בדקו בסימולטור והעבירו ללוח."
         - "חברו סוללה וענדו את התג!"
-      tip: "כדי שיהיה רווח בין פעם לפעם, הוסיפו [[pause (ms)]] אחרי השם."
+      tip: "כדי שיהיה רווח בין פעם לפעם, הוסיפו [[השהה (ms)]] אחרי השם."
       challenge: "אחרי השם הציגו גם אייקון שמתאים לכם – תחביב, חיה אהובה..."
     guide:
       duration: "40 דקות"
@@ -224,7 +237,9 @@ lessons:
       extension: "כפתור A מציג את השם, כפתור B את הגיל או את הכיתה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/name-badge/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Lme8X5Lq5RXE"
+          hex: "https://downloads.microbit.org/downloads/name-badge-makecode.hex"
 
   - id: here-comes-the-sun
     title: "הנה באה השמש"
@@ -235,7 +250,7 @@ lessons:
     student:
       goal: "נצייר שמש שעולה מעל האופק."
       steps:
-        - "בתוך [[forever]] הוסיפו כמה בלוקים [[show leds]]."
+        - "בתוך [[לעולמים]] הוסיפו כמה בלוקים [[הצג נוריות לד]]."
         - "בכל תמונה ציירו את השמש קצת יותר גבוה."
         - "בתמונה האחרונה הוסיפו קרני שמש ☀️."
       tip: "אפשר לשכפל בלוק בקליק ימני ← Duplicate, ולשנות בו רק כמה נורות."
@@ -247,7 +262,9 @@ lessons:
       extension: "כפתור A = זריחה, כפתור B = שקיעה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/here-comes-the-sun/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_WAP3mJ7dpWTe"
+          hex: "https://downloads.microbit.org/downloads/here-comes-the-sun-makecode.hex"
 
   - id: dice
     title: "קובייה"
@@ -259,9 +276,9 @@ lessons:
       goal: "נהפוך את המיקרוביט לקובייה: מנערים אותו – ומופיע מספר."
       concept: "**מספר אקראי** הוא מספר שאי אפשר לדעת מראש מה יהיה – בדיוק כמו בהטלת קובייה. **מד התאוצה** מרגיש מתי מנערים את הלוח."
       steps:
-        - "מקטגוריית **Input** גררו [[on shake]]."
-        - "בתוכו שימו [[show number]]."
-        - "מקטגוריית **Math** גררו [[pick random 0 to 10]] לתוך העיגול של show number."
+        - "מקטגוריית **קלט** גררו [[כאשר שקשק]]."
+        - "בתוכו שימו [[הצג מספר]]."
+        - "מקטגוריית **מתמטיקה** גררו [[בחר מספר אקראי 0 ל 10]] לתוך העיגול של הצג מספר."
         - "שנו את הטווח ל-1 עד 6."
         - "בסימולטור לחצו על SHAKE כדי לנער."
       tip: "חשבו: למה צריך לכתוב 1 ולא 0?"
@@ -275,7 +292,9 @@ lessons:
       extension: "לספור כמה פעמים יצא כל מספר (מקדים את נושא המשתנים)."
     links:
       source: "https://microbit.org/projects/make-it-code-it/dice/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_hUpi4RFKjJF7"
+          hex: "https://downloads.microbit.org/downloads/dice-makecode.hex"
 
   - id: graphical-dice
     title: "קובייה גרפית"
@@ -285,24 +304,26 @@ lessons:
     summary: "קובייה שמציגה נקודות כמו בקובייה אמיתית."
     student:
       goal: "נשדרג את הקובייה: במקום ספרה יופיעו נקודות, כמו בקובייה אמיתית ⚀ ⚁ ⚂."
-      concept: "**משתנה** הוא קופסה ששומרת מספר. **תנאי** (if) בודק משהו ומחליט מה לעשות."
+      concept: "**משתנה** הוא קופסה ששומרת מספר. **תנאי** (אם) בודק משהו ומחליט מה לעשות."
       steps:
-        - "צרו משתנה בשם roll (קטגוריית Variables ← Make a Variable)."
-        - "בתוך [[on shake]] שימו [[set roll to]] עם [[pick random 1 to 6]]."
-        - "הוסיפו [[if then]] מקטגוריית Logic: אם roll = 1, הציגו [[show leds]] עם נקודה אחת באמצע."
-        - "לחצו על ה-➕ שבבלוק if כדי להוסיף [[else if]] לכל מספר עד 6."
+        - "צרו משתנה בשם roll (קטגוריית משתנים ← צור משתנה)."
+        - "בתוך [[כאשר שקשק]] שימו [[הצב roll ל]] עם [[בחר מספר אקראי 1 ל 6]]."
+        - "הוסיפו [[אם אז]] מקטגוריית לוגיקה: אם roll = 1, הציגו [[הצג נוריות לד]] עם נקודה אחת באמצע."
+        - "לחצו על ה-➕ שבבלוק אם כדי להוסיף [[אחרת אם]] לכל מספר עד 6."
         - "ציירו את הנקודות של כל מספר."
-      tip: "ההשוואה = נמצאת בקטגוריה Logic."
+      tip: "ההשוואה = נמצאת בקטגוריה לוגיקה."
       challenge: "הוסיפו אנימציה של קובייה מסתובבת לפני שהתוצאה מופיעה."
     guide:
       duration: "45 דקות"
-      objectives: ["היכרות ראשונה עם משתנה ועם if / else if"]
+      objectives: ["היכרות ראשונה עם משתנה ועם אם / אחרת אם"]
       materials: ["micro:bit", "קובייה אמיתית"]
       common_mistakes: ["השוואה של טקסט במקום מספר (בלוק השוואה לא נכון)"]
       extension: "שתי קוביות: כפתור A וכפתור B."
     links:
       source: "https://microbit.org/projects/make-it-code-it/graphical-dice/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Em9XRuEpaERr"
+          hex: "https://downloads.microbit.org/downloads/graphical-dice-makecode.hex"
 
   - id: rock-paper-scissors
     title: "אבן, נייר ומספריים"
@@ -314,22 +335,24 @@ lessons:
       goal: "נבנה את המשחק אבן-נייר-מספריים. כל שחקן מנער את הלוח ומקבל צורה אקראית."
       steps:
         - "צרו משתנה בשם hand."
-        - "בתוך [[on shake]]: [[set hand to]] [[pick random 1 to 3]]."
-        - "[[if]] hand = 1 → הציגו אבן (ריבוע קטן)."
-        - "[[else if]] hand = 2 → הציגו נייר (ריבוע גדול)."
-        - "[[else]] → הציגו מספריים (האייקון scissors)."
+        - "בתוך [[כאשר שקשק]]: [[הצב hand ל]] [[בחר מספר אקראי 1 ל 3]]."
+        - "[[אם]] hand = 1 → הציגו אבן (ריבוע קטן)."
+        - "[[אחרת אם]] hand = 2 → הציגו נייר (ריבוע גדול)."
+        - "[[אחרת]] → הציגו מספריים (האייקון scissors)."
         - "שחקו בזוגות: 3... 2... 1... לנער!"
-      tip: "למה במקרה האחרון מספיק [[else]] ולא צריך לבדוק ש-hand = 3?"
+      tip: "למה במקרה האחרון מספיק [[אחרת]] ולא צריך לבדוק ש-hand = 3?"
       challenge: "הוסיפו אפשרות רביעית משלכם (למשל: באר 🕳️) ושנו את הכללים."
     guide:
       duration: "45 דקות"
-      objectives: ["if / else if / else", "שימוש במשתנה לשמירת תוצאה אקראית"]
+      objectives: ["אם / אחרת אם / אחרת", "שימוש במשתנה לשמירת תוצאה אקראית"]
       materials: ["micro:bit לכל תלמיד", "סוללות"]
       flow: ["משחק בידיים", "בניית הקוד", "טורניר בכיתה"]
       extension: "גרסה בשני לוחות שמשדרים זה לזה ברדיו (קשור למפגש 12)."
     links:
       source: "https://microbit.org/projects/make-it-code-it/rock-paper-scissors/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_arUf8fFvXX9w"
+          hex: "https://downloads.microbit.org/downloads/rock-paper-scissors-makecode.hex"
 
   - id: magic-8ball
     title: "כדור הקסם"
@@ -341,19 +364,21 @@ lessons:
       goal: "נבנה כדור קסם שעונה על שאלות כן/לא: שואלים, מנערים – ומקבלים תשובה."
       steps:
         - "צרו משתנה answer."
-        - "בתוך [[on shake]] בחרו מספר אקראי מ-1 עד 3 ושמרו ב-answer."
-        - "לכל מספר הציגו תשובה אחרת עם [[show string]]: YES, NO, MAYBE."
+        - "בתוך [[כאשר שקשק]] בחרו מספר אקראי מ-1 עד 3 ושמרו ב-answer."
+        - "לכל מספר הציגו תשובה אחרת עם [[הצג מחרוזת]]: YES, NO, MAYBE."
         - "שאלו את הכדור שאלה ונערו!"
       tip: "תשובות קצרות נקראות יותר בקלות על המסך."
       challenge: "הוסיפו עוד 3 תשובות משלכם. מה צריך לשנות בבלוק המספר האקראי?"
     guide:
       duration: "45 דקות"
-      objectives: ["חיזוק if / else", "קשר בין טווח אקראי למספר האפשרויות"]
+      objectives: ["חיזוק אם / אחרת", "קשר בין טווח אקראי למספר האפשרויות"]
       materials: ["micro:bit", "סוללות"]
-      extension: "להשתמש במערך (array) של תשובות במקום if (לתלמידים מתקדמים)."
+      extension: "להשתמש במערך (array) של תשובות במקום אם (לתלמידים מתקדמים)."
     links:
       source: "https://microbit.org/projects/make-it-code-it/magic-8ball/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_V7FAm44TyfFT"
+          hex: "https://downloads.microbit.org/downloads/magic-8-ball-makecode.hex"
 
   - id: counter
     title: "מונה"
@@ -366,20 +391,22 @@ lessons:
       concept: "**משתנה** הוא כמו קופסה עם שם, ששומרת מספר. אפשר לשנות את המספר בה בכל רגע."
       steps:
         - "צרו משתנה בשם count."
-        - "ב-[[on start]] שימו [[set count to 0]]."
-        - "בתוך [[on button A pressed]] שימו [[change count by 1]] ואחריו [[show number]] count."
-        - "בתוך [[on button B pressed]] אפסו את count ל-0."
-      tip: "את המשתנה עצמו (הבלוק העגול count) גוררים מקטגוריית Variables."
+        - "ב-[[כאשר מתחיל]] שימו [[הצב count ל 0]]."
+        - "בתוך [[כאשר כפתור A לחוץ]] שימו [[לשנות count ב 1]] ואחריו [[הצג מספר]] count."
+        - "בתוך [[כאשר כפתור B לחוץ]] אפסו את count ל-0."
+      tip: "את המשתנה עצמו (הבלוק העגול count) גוררים מקטגוריית משתנים."
       challenge: "גרמו לכפתור B להוריד 1 במקום לאפס."
     guide:
       duration: "40 דקות"
       objectives: ["יצירת משתנה, אתחול ושינוי שלו"]
       materials: ["micro:bit"]
-      common_mistakes: ["show number עם המספר 0 במקום עם המשתנה count"]
+      common_mistakes: ["הצג מספר עם המספר 0 במקום עם המשתנה count"]
       extension: "מונה שמשמיע צליל בכל 10."
     links:
       source: "https://microbit.org/projects/make-it-code-it/counter/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_JM345hbMLTyM"
+          hex: "https://downloads.microbit.org/downloads/counter-simple-makecode.hex"
 
   - id: step-counter
     title: "סופר צעדים"
@@ -390,9 +417,9 @@ lessons:
     student:
       goal: "נבנה מד צעדים! שימו את המיקרוביט בגרב או קשרו לרגל – ובכל צעד המספר גדל."
       steps:
-        - "צרו משתנה steps וב-[[on start]] קבעו אותו ל-0."
-        - "בתוך [[on shake]]: [[change steps by 1]]."
-        - "בתוך [[forever]]: [[show number]] steps."
+        - "צרו משתנה steps וב-[[כאשר מתחיל]] קבעו אותו ל-0."
+        - "בתוך [[כאשר שקשק]]: [[לשנות steps ב 1]]."
+        - "בתוך [[לעולמים]]: [[הצג מספר]] steps."
         - "חברו סוללה, צאו לסיבוב קצר וספרו צעדים."
       tip: "כדי לחסוך בסוללה אפשר להציג את המספר רק כשלוחצים על A."
       challenge: "האם המונה מדויק? ספרו 20 צעדים בראש והשוו."
@@ -404,7 +431,9 @@ lessons:
       extension: "הגרסה החסכונית (low-energy-step-counter) או הגרסה הרגישה (sensitive-step-counter) מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/step-counter/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_E6uhUWKEqL1L"
+          hex: "https://downloads.microbit.org/downloads/step-counter-makecode.hex"
 
   - id: nightlight
     title: "מנורת לילה"
@@ -414,24 +443,26 @@ lessons:
     summary: "כשחשוך – הנורות נדלקות לבד."
     student:
       goal: "נבנה מנורת לילה שנדלקת לבד כשנהיה חשוך."
-      concept: "נורות ה-LED של המיקרוביט יודעות גם **למדוד אור**! הבלוק [[light level]] נותן מספר בין 0 (חושך) ל-255 (אור חזק)."
+      concept: "נורות ה-LED של המיקרוביט יודעות גם **למדוד אור**! הבלוק [[עצמת האור]] נותן מספר בין 0 (חושך) ל-255 (אור חזק)."
       steps:
-        - "בתוך [[forever]] שימו [[if then else]]."
-        - "התנאי: [[light level]] [[<]] 100."
-        - "אם חשוך → [[show leds]] עם כל הנורות דולקות."
-        - "אחרת → [[clear screen]]."
+        - "בתוך [[לעולמים]] שימו [[אם אז אחרת]]."
+        - "התנאי: [[עצמת האור]] [[<]] 100."
+        - "אם חשוך → [[הצג נוריות לד]] עם כל הנורות דולקות."
+        - "אחרת → [[נקה מסך]]."
         - "בסימולטור גררו את השמש הצהובה למעלה ולמטה."
       tip: "המספר 100 הוא **סף**. אם המנורה לא נדלקת אצלכם – נסו לשנות אותו."
-      challenge: "הציגו קודם את רמת האור עם [[show number]], כדי לבחור את הסף המתאים לכיתה."
+      challenge: "הציגו קודם את רמת האור עם [[הצג מספר]], כדי לבחור את הסף המתאים לכיתה."
     guide:
       duration: "45 דקות"
-      objectives: ["קריאת חיישן", "השוואה לסף", "if / else בתוך forever"]
+      objectives: ["קריאת חיישן", "השוואה לסף", "אם / אחרת בתוך לעולמים"]
       materials: ["micro:bit", "סוללות", "פנס או טלפון"]
       common_mistakes: ["סף לא מתאים לתאורה בכיתה"]
       extension: "בהירות שמשתנה בהדרגה לפי רמת האור (set brightness)."
     links:
       source: "https://microbit.org/projects/make-it-code-it/nightlight/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_dz7W7hWM2AdR"
+          hex: "https://downloads.microbit.org/downloads/nightlight-makecode.hex"
 
   - id: sunlight-sensor
     title: "חיישן שמש"
@@ -442,21 +473,23 @@ lessons:
     student:
       goal: "נבנה חיישן שמראה שמש כשיש אור, ומסך ריק כשמכסים את הלוח."
       steps:
-        - "בתוך [[forever]] שימו [[if then else]]."
-        - "התנאי: [[light level]] [[>]] 100."
-        - "אם כן → ציירו שמש עם [[show leds]]."
-        - "אחרת → [[clear screen]]."
+        - "בתוך [[לעולמים]] שימו [[אם אז אחרת]]."
+        - "התנאי: [[עצמת האור]] [[>]] 100."
+        - "אם כן → ציירו שמש עם [[הצג נוריות לד]]."
+        - "אחרת → [[נקה מסך]]."
         - "נסו לכסות את הלוח ביד."
       tip: "שימו לב שזה ההפך ממנורת הלילה: כאן בודקים **גדול מ-**."
       challenge: "הוסיפו מצב שלישי: אם האור חלש – ענן ☁️, ואם חזק – שמש."
     guide:
       duration: "40 דקות"
-      objectives: ["השוואה בין > ל-<", "else if לשלושה מצבים"]
+      objectives: ["השוואה בין > ל-<", "אחרת אם לשלושה מצבים"]
       materials: ["micro:bit", "סוללות"]
       extension: "לצאת החוצה ולמדוד אור בצל ובשמש."
     links:
       source: "https://microbit.org/projects/make-it-code-it/sunlight-sensor/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_cetA5h6DF41v"
+          hex: "https://downloads.microbit.org/downloads/sunlight-sensor-makecode.hex"
 
   - id: thermometer
     title: "מדחום"
@@ -466,10 +499,10 @@ lessons:
     summary: "מציגים את הטמפרטורה במעלות צלזיוס."
     student:
       goal: "נהפוך את המיקרוביט למדחום."
-      concept: "במעבד של המיקרוביט יש **חיישן טמפרטורה**. הבלוק [[temperature (°C)]] נותן את הטמפרטורה במעלות."
+      concept: "במעבד של המיקרוביט יש **חיישן טמפרטורה**. הבלוק [[טמפרטורה (° C)]] נותן את הטמפרטורה במעלות."
       steps:
-        - "בתוך [[forever]] שימו [[show number]]."
-        - "לתוכו גררו [[temperature (°C)]] מקטגוריית Input."
+        - "בתוך [[לעולמים]] שימו [[הצג מספר]]."
+        - "לתוכו גררו [[טמפרטורה (° C)]] מקטגוריית קלט."
         - "בסימולטור גררו את המדחום שליד הלוח."
         - "העבירו ללוח ונסו בכמה מקומות בכיתה."
       tip: "החיישן נמצא במעבד, ולכן הוא מראה קצת יותר חם מהאוויר כשהלוח עובד הרבה זמן."
@@ -481,7 +514,9 @@ lessons:
       extension: "מדחום מקסימום-מינימום (max-min-thermometer) מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/thermometer/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_fEaXEL7KUU4x"
+          hex: "https://downloads.microbit.org/downloads/thermometer-makecode.hex"
 
   - id: compass-bearing
     title: "מצפן"
@@ -493,7 +528,7 @@ lessons:
       goal: "נשתמש במצפן של המיקרוביט כדי לדעת לאיזה כיוון אנחנו פונים."
       concept: "**מצפן** מרגיש את השדה המגנטי של כדור הארץ. 0 מעלות = צפון, 90 = מזרח, 180 = דרום, 270 = מערב."
       steps:
-        - "בתוך [[forever]] שימו [[show number]] עם [[compass heading (°)]]."
+        - "בתוך [[לעולמים]] שימו [[הצג מספר]] עם [[כיוון המצפן (°)]]."
         - "העבירו ללוח. בפעם הראשונה הלוח יבקש **לכייל**: הטו אותו לכל הכיוונים עד שכל המסך דולק."
         - "סובבו את הלוח ומצאו איפה הצפון."
       tip: "מחשבים, רמקולים ומגנטים מבלבלים את המצפן. התרחקו מהם."
@@ -506,7 +541,9 @@ lessons:
       extension: "compass-north מהמאגר – חץ שתמיד מצביע צפונה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/compass-bearing/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_716cyLFpP66A"
+          hex: "https://downloads.microbit.org/downloads/compass-bearing-makecode.hex"
 
   - id: jukebox
     title: "תיבת נגינה"
@@ -517,7 +554,7 @@ lessons:
     student:
       goal: "נבנה תיבת נגינה: כפתור A מנגן שיר אחד, כפתור B שיר אחר."
       steps:
-        - "מקטגוריית **Music** גררו [[play melody]] לתוך [[on button A pressed]]."
+        - "מקטגוריית **צלילים** גררו [[play melody]] לתוך [[כאשר כפתור A לחוץ]]."
         - "בחרו מנגינה מהרשימה."
         - "עשו אותו דבר לכפתור B עם מנגינה אחרת."
         - "ב-micro:bit V2 הצליל יוצא מהרמקול. ב-V1 צריך לחבר אוזניות לפין 0 ול-GND."
@@ -531,7 +568,9 @@ lessons:
       extension: "jukebox-with-volume מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/jukebox/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_guCi12DwYUKA"
+          hex: "https://downloads.microbit.org/downloads/jukebox-makecode.hex"
 
   - id: make-some-noise
     title: "עושים רעש"
@@ -542,8 +581,8 @@ lessons:
     student:
       goal: "נשמיע מנגינה ונלמד לכתוב מנגינה משלנו."
       steps:
-        - "בתוך [[on button A pressed]] שימו [[play melody]] ובחרו מנגינה."
-        - "בתוך [[on button B pressed]] שימו [[play tone]] כמה פעמים, כל פעם עם תו אחר."
+        - "בתוך [[כאשר כפתור A לחוץ]] שימו [[play melody]] ובחרו מנגינה."
+        - "בתוך [[כאשר כפתור B לחוץ]] שימו [[נגן צליל]] כמה פעמים, כל פעם עם תו אחר."
         - "נסו לנגן את התחלת השיר יונתן הקטן: סול-מי-מי, פה-רה-רה."
       tip: "בבלוק [[play melody]] אפשר ללחוץ על המנגינה ולערוך אותה בעורך המוזיקה."
       challenge: "כתבו מנגינה של שיר שכולם מכירים ותנו לחברים לנחש."
@@ -554,7 +593,9 @@ lessons:
       extension: "frere-jacques-tune מהמאגר – מנגינה עם לולאות."
     links:
       source: "https://microbit.org/projects/make-it-code-it/make-some-noise/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_DbcgCAdAKeE6"
+          hex: "https://downloads.microbit.org/downloads/make-some-noise-makecode.hex"
 
   - id: sound-meter
     title: "מד רעש"
@@ -567,7 +608,7 @@ lessons:
       goal: "נבנה מד רעש שמראה בגרף כמה רועש בכיתה."
       concept: "ל-micro:bit V2 יש **מיקרופון**. הבלוק [[sound level]] נותן מספר בין 0 (שקט) ל-255 (רועש מאוד)."
       steps:
-        - "בתוך [[forever]] שימו [[plot bar graph of]] מקטגוריית Led."
+        - "בתוך [[לעולמים]] שימו [[plot bar graph of]] מקטגוריית Led."
         - "בתוך הבלוק: [[sound level]], ו-up to 255."
         - "העבירו ללוח ודברו, מחאו כפיים, לחשו."
       tip: "נורת המיקרופון ליד הלוגו נדלקת כשהמיקרופון עובד."
@@ -579,7 +620,9 @@ lessons:
       extension: "להשאיר את מד הרעש פועל בכיתה כמחוון שקט."
     links:
       source: "https://microbit.org/projects/make-it-code-it/sound-meter/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Wzy8zrW2i8th"
+          hex: "https://downloads.microbit.org/downloads/sound-meter-makecode.hex"
 
   - id: clap-hearts
     title: "לבבות במחיאת כף"
@@ -591,8 +634,8 @@ lessons:
     student:
       goal: "נגרום ללב להופיע כשמוחאים כף."
       steps:
-        - "מקטגוריית Input גררו [[on loud sound]]."
-        - "בתוכו [[show icon]] לב, [[pause (ms)]] ו-[[clear screen]]."
+        - "מקטגוריית קלט גררו [[on loud sound]]."
+        - "בתוכו [[הצג את הסמל]] לב, [[השהה (ms)]] ו-[[נקה מסך]]."
         - "מחאו כף!"
       tip: "אפשר לשנות מה נחשב רעש חזק עם [[set loud sound threshold]]."
       challenge: "הוסיפו מונה מחיאות כפיים (חזרה על נושא המשתנים)."
@@ -603,7 +646,9 @@ lessons:
       extension: "clap-lights מהמאגר – מדליק ומכבה במחיאה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/clap-hearts/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_AhPKDR2UDf7H"
+          hex: "https://downloads.microbit.org/downloads/clap-hearts-makecode.hex"
 
   - id: teleporting-duck
     title: "ברווז מטלפרט"
@@ -615,9 +660,9 @@ lessons:
       goal: "נשלח ברווז מלוח ללוח בלי חוטים, דרך **רדיו**!"
       concept: "למיקרוביט יש **רדיו** שיכול לשלוח הודעות ללוחות אחרים. רק לוחות באותה **קבוצה** (group) שומעים זה את זה."
       steps:
-        - "ב-[[on start]]: [[radio set group]] – בחרו מספר יחד עם בן/בת הזוג (למשל 7). בנוסף [[show icon]] ברווז."
-        - "בתוך [[on shake]]: [[radio send number 0]] ואז [[clear screen]]."
-        - "הוסיפו [[on radio received]]: [[show icon]] ברווז."
+        - "ב-[[כאשר מתחיל]]: [[רדיו הגדר מזהה קבוצה]] – בחרו מספר יחד עם בן/בת הזוג (למשל 7). בנוסף [[הצג את הסמל]] ברווז."
+        - "בתוך [[כאשר שקשק]]: [[רדיו שלח מספר 0]] ואז [[נקה מסך]]."
+        - "הוסיפו [[כאשר מתקבל אות רדיו]]: [[הצג את הסמל]] ברווז."
         - "העבירו את אותו קוד לשני הלוחות ונערו!"
       tip: "בסימולטור מופיעים אוטומטית שני לוחות כשמשתמשים ברדיו."
       challenge: "שחקו בשלושה לוחות – למי הברווז יגיע?"
@@ -630,7 +675,9 @@ lessons:
       extension: "group-teleporting-duck מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/teleporting-duck/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_W9id6YdkMME9"
+          hex: "https://downloads.microbit.org/downloads/teleporting-duck-makecode.hex"
 
   - id: send-a-smile
     title: "שולחים חיוך"
@@ -641,12 +688,12 @@ lessons:
     student:
       goal: "נשלח חיוך לחבר בלחיצת כפתור 😊."
       steps:
-        - "ב-[[on start]]: [[radio set group]] עם המספר של הזוג שלכם."
-        - "בתוך [[on button A pressed]]: [[radio send number 1]]."
-        - "בתוך [[on radio received receivedNumber]]: [[show icon]] סמיילי."
+        - "ב-[[כאשר מתחיל]]: [[רדיו הגדר מזהה קבוצה]] עם המספר של הזוג שלכם."
+        - "בתוך [[כאשר כפתור A לחוץ]]: [[רדיו שלח מספר 1]]."
+        - "בתוך [[כאשר מתקבל אות רדיו receivedNumber]]: [[הצג את הסמל]] סמיילי."
         - "העבירו לשני הלוחות ושלחו חיוכים."
       tip: "מה ההבדל בין הלוח ששולח ללוח שמקבל? (רמז: בפרויקט הזה – אין הבדל!)"
-      challenge: "כפתור B ישלח 2 ויציג פרצוף עצוב. בדקו מה התקבל עם [[if]] על receivedNumber."
+      challenge: "כפתור B ישלח 2 ויציג פרצוף עצוב. בדקו מה התקבל עם [[אם]] על receivedNumber."
     guide:
       duration: "45 דקות"
       objectives: ["שליחה וקבלה של מספר", "שימוש בערך שהתקבל"]
@@ -654,7 +701,9 @@ lessons:
       extension: "secure-messaging מהמאגר – הודעות מוצפנות."
     links:
       source: "https://microbit.org/projects/make-it-code-it/send-a-smile/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_TJmWc1MhsKCd"
+          hex: "https://downloads.microbit.org/downloads/send-a-smile-makecode.hex"
 
   - id: simple-tilt-alarm
     title: "אזעקת הטיה"
@@ -665,12 +714,12 @@ lessons:
     student:
       goal: "נבנה אזעקה שמתריעה כשמישהו מזיז את החפץ שלנו."
       steps:
-        - "בתוך [[forever]] שימו [[if then else]]."
-        - "התנאי: [[is shake gesture]] מקטגוריית Input (הבלוק המשושה)."
-        - "אם כן → [[show icon]] X ו-[[play melody]] (או [[play sound]] ב-V2)."
-        - "אחרת → [[clear screen]]."
+        - "בתוך [[לעולמים]] שימו [[אם אז אחרת]]."
+        - "התנאי: [[האם שקשק מחווה]] מקטגוריית קלט (הבלוק המשושה)."
+        - "אם כן → [[הצג את הסמל]] X ו-[[play melody]] (או [[play sound]] ב-V2)."
+        - "אחרת → [[נקה מסך]]."
         - "שימו את הלוח על הקלמר שלכם ותנו לחבר לנסות לגנוב אותו 😉."
-      tip: "בבלוק [[is shake gesture]] אפשר לבחור תנועות אחרות: tilt left, face down ועוד."
+      tip: "בבלוק [[האם שקשק מחווה]] אפשר לבחור תנועות אחרות: tilt left, face down ועוד."
       challenge: "כפתור A ידליק את האזעקה וכפתור B יכבה אותה."
     guide:
       duration: "40 דקות"
@@ -679,7 +728,9 @@ lessons:
       extension: "tilt-alarm (מתקדם) מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/simple-tilt-alarm/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_FuiW8VFPwg36"
+          hex: "https://downloads.microbit.org/downloads/simple-tilt-alarm-simple-door-alarm-makecode.hex"
 
   - id: cookie-tin-alarm
     title: "אזעקת קופסת עוגיות"
@@ -690,10 +741,10 @@ lessons:
     student:
       goal: "נשמור על העוגיות 🍪: כשמישהו פותח את הקופסה נכנס אור, והמיקרוביט מציג פרצוף כועס."
       steps:
-        - "בתוך [[forever]] שימו [[if then else]]."
-        - "התנאי: [[light level]] [[>]] 30."
-        - "אם כן → [[show icon]] פרצוף כועס."
-        - "אחרת → [[clear screen]]."
+        - "בתוך [[לעולמים]] שימו [[אם אז אחרת]]."
+        - "התנאי: [[עצמת האור]] [[>]] 30."
+        - "אם כן → [[הצג את הסמל]] פרצוף כועס."
+        - "אחרת → [[נקה מסך]]."
         - "שימו את הלוח עם סוללה בתוך קופסה וסגרו."
       tip: "פעם קודמת השתמשנו בחיישן האור להפך – זוכרים את מנורת הלילה?"
       challenge: "הוסיפו צליל אזעקה (ב-V2)."
@@ -704,35 +755,39 @@ lessons:
       extension: "audible-cookie-tin-alarm מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/cookie-tin-alarm/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_7yKVKiLX00Rs"
+          hex: "https://downloads.microbit.org/downloads/cookie-tin-alarm-makecode.hex"
 
   - id: hot-potato-game
     title: "תפוח אדמה לוהט"
     source: microbit
     level: intermediate
-    concepts: [משתנה, לולאת while, מספר אקראי]
+    concepts: [משתנה, לולאת כל עוד, מספר אקראי]
     summary: "מעבירים את הלוח במעגל – אצל מי שהזמן נגמר, הוא בחוץ!"
     student:
       goal: "נבנה משחק: מעבירים את המיקרוביט במעגל, ומי שמחזיק אותו כשהזמן נגמר – יוצא."
-      concept: "לולאת **while** חוזרת על עצמה **כל עוד** תנאי מסוים נכון."
+      concept: "לולאת **כל עוד** חוזרת על עצמה **כל עוד** תנאי מסוים נכון."
       steps:
         - "צרו משתנה timer."
-        - "בתוך [[on button A pressed]]: [[set timer to]] [[pick random 5 to 15]], והציגו תמונה שמסמנת שהמשחק התחיל."
-        - "הוסיפו [[while timer > 0]] מקטגוריית Loops."
-        - "בתוך הלולאה: [[pause (ms) 1000]] ואז [[change timer by -1]]."
-        - "אחרי הלולאה: [[show icon]] X וצליל עצוב."
+        - "בתוך [[כאשר כפתור A לחוץ]]: [[הצב timer ל]] [[בחר מספר אקראי 5 ל 15]], והציגו תמונה שמסמנת שהמשחק התחיל."
+        - "הוסיפו [[כל עוד timer > 0]] מקטגוריית לולאות."
+        - "בתוך הלולאה: [[השהה (ms) 1000]] ואז [[לשנות timer ב -1]]."
+        - "אחרי הלולאה: [[הצג את הסמל]] X וצליל עצוב."
         - "עמדו במעגל ושחקו!"
       tip: "השחקנים לא יודעים כמה זמן נשאר – זה מה שעושה את המשחק מותח."
       challenge: "הוסיפו טיקטוק – צליל קצר בכל שנייה."
     guide:
       duration: "50 דקות"
-      objectives: ["לולאת while", "ספירה לאחור עם משתנה"]
+      objectives: ["לולאת כל עוד", "ספירה לאחור עם משתנה"]
       materials: ["micro:bit V2 (לצליל)", "סוללות"]
       flow: ["בניית הקוד", "משחק בקבוצות של 5–6"]
       extension: "טיקטוק שמאיץ ככל שהזמן אוזל."
     links:
       source: "https://microbit.org/projects/make-it-code-it/hot-potato-game/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_cKEYtihoMW54"
+          hex: "https://downloads.microbit.org/downloads/hot-potato-game-makecode.hex"
 
   - id: times-tables-tester
     title: "בוחן לוח הכפל"
@@ -744,19 +799,21 @@ lessons:
       goal: "נבנה בוחן לוח כפל שמתרגל אותנו!"
       steps:
         - "צרו שני משתנים: a ו-b."
-        - "בתוך [[on button A pressed]]: קבעו לכל אחד [[pick random 1 to 10]], והציגו [[show string]] עם התרגיל (a × b)."
-        - "בתוך [[on button B pressed]]: [[show number]] עם [[a × b]] מקטגוריית Math."
+        - "בתוך [[כאשר כפתור A לחוץ]]: קבעו לכל אחד [[בחר מספר אקראי 1 ל 10]], והציגו [[הצג מחרוזת]] עם התרגיל (a × b)."
+        - "בתוך [[כאשר כפתור B לחוץ]]: [[הצג מספר]] עם [[a × b]] מקטגוריית מתמטיקה."
         - "שחקו בזוגות: אחד שואל, השני עונה בעל פה."
-      tip: "כדי לחבר טקסט ומספרים השתמשו ב-[[join]] מקטגוריית Text."
+      tip: "כדי לחבר טקסט ומספרים השתמשו ב-[[צרף]] מקטגוריית Text."
       challenge: "גרסת אלופים: מספרים עד 12."
     guide:
       duration: "40 דקות"
-      objectives: ["פעולות חשבון בקוד", "join של טקסט ומספרים"]
+      objectives: ["פעולות חשבון בקוד", "צרף של טקסט ומספרים"]
       materials: ["micro:bit"]
       extension: "ניקוד: A+B אם צדקתי, והמונה עולה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/times-tables-tester/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_fHxHYaPrm1gr"
+          hex: "https://downloads.microbit.org/downloads/times-tables-tester-makecode.hex"
 
   - id: microbit-pet
     title: "חיית מחמד במיקרוביט"
@@ -768,11 +825,11 @@ lessons:
     student:
       goal: "נגדל חיית מחמד וירטואלית! אם לא מלטפים אותה היא נהיית עצובה, ואחר כך נרדמת..."
       steps:
-        - "צרו משתנה timer וב-[[on start]] קבעו אותו ל-0. הציגו פרצוף שמח."
-        - "בתוך [[forever]]: [[change timer by 1]] ו-[[pause (ms) 1000]]."
+        - "צרו משתנה timer וב-[[כאשר מתחיל]] קבעו אותו ל-0. הציגו פרצוף שמח."
+        - "בתוך [[לעולמים]]: [[לשנות timer ב 1]] ו-[[השהה (ms) 1000]]."
         - "אם timer = 20 → פרצוף עצוב וצליל sad."
         - "אם timer = 30 → פרצוף ישן (asleep)."
-        - "בתוך [[on logo pressed]] (ליטוף!) ובתוך [[on shake]]: אפסו את timer והציגו פרצוף שמח."
+        - "בתוך [[on logo pressed]] (ליטוף!) ובתוך [[כאשר שקשק]]: אפסו את timer והציגו פרצוף שמח."
       tip: "הלוגו שבחזית ה-V2 הוא כפתור מגע – פשוט נוגעים בו."
       challenge: "תנו לחיה שם, ותכננו לה תגובה מיוחדת כשלוחצים A (אוכל?)."
     guide:
@@ -783,7 +840,9 @@ lessons:
       extension: "מצבים נוספים: רעב, משועמם."
     links:
       source: "https://microbit.org/projects/make-it-code-it/microbit-pet/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_28F66oD2X6mz"
+          hex: "https://downloads.microbit.org/downloads/micro-bit-pet-makecode.hex"
 
   - id: treasure-hunt
     title: "ציד אוצרות"
@@ -794,9 +853,9 @@ lessons:
     student:
       goal: "נשחק בציד אוצרות: מחביאים לוחות ש**משדרים**, ומחפשים אותם עם לוח ש**קולט**."
       steps:
-        - "**לוח אוצר:** ב-[[on start]] קבעו [[radio set group]], [[radio set transmit power 1]] (שידור חלש = צריך להתקרב), ומשתנה id עם מספר האוצר."
-        - "בתוך [[forever]] של לוח האוצר: [[radio send number]] id ו-[[pause (ms) 200]]."
-        - "**לוח מחפש:** [[radio set group]] זהה, ובתוך [[on radio received]] הציגו את המספר שהתקבל."
+        - "**לוח אוצר:** ב-[[כאשר מתחיל]] קבעו [[רדיו הגדר מזהה קבוצה]], [[רדיו הגדר עוצמת אות 1]] (שידור חלש = צריך להתקרב), ומשתנה id עם מספר האוצר."
+        - "בתוך [[לעולמים]] של לוח האוצר: [[רדיו שלח מספר]] id ו-[[השהה (ms) 200]]."
+        - "**לוח מחפש:** [[רדיו הגדר מזהה קבוצה]] זהה, ובתוך [[כאשר מתקבל אות רדיו]] הציגו את המספר שהתקבל."
         - "החביאו את האוצרות, כל אחד עם id אחר – ויוצאים לחפש!"
       tip: "ככל שעוצמת השידור נמוכה יותר, צריך להתקרב יותר כדי לקלוט."
       challenge: "המחפש יציג ✔️ רק לאחר שמצא את כל האוצרות."
@@ -808,7 +867,13 @@ lessons:
       extension: "proximity-beacon מהמאגר – מדידת קרבה לפי עוצמת אות."
     links:
       source: "https://microbit.org/projects/make-it-code-it/treasure-hunt/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - label: "המשואה (משדר)"
+          makecode: "https://makecode.microbit.org/#pub:_73dMchDJmRMU"
+          hex: "https://downloads.microbit.org/downloads/treasure-hunt-treasure-hunt-beacon-makecode.hex"
+        - label: "המקלט"
+          makecode: "https://makecode.microbit.org/#pub:_h3g067gjK2CW"
+          hex: "https://downloads.microbit.org/downloads/treasure-hunt-treasure-hunt-receiver-makecode.hex"
 
   - id: project-part-a
     title: "פרויקט סיכום – חלק א׳"
@@ -852,9 +917,9 @@ lessons:
       steps:
         - "מצאו על הרובוט: 2 מנועים וגלגלים, פנס צבעוני גדול מקדימה, נורות צבעוניות מתחת, חיישן מרחק (עיניים), 2 חיישני קו מתחת, מיקרופון וזמזם."
         - "הכניסו את המיקרוביט לחריץ – **המסך פונה קדימה**."
-        - "ב-MakeCode פתחו פרויקט חדש ← **Extensions** ← הדביקו את הכתובת: [[https://github.com/YahboomTechnology/Tiny-bitLib]]"
+        - "ב-MakeCode פתחו פרויקט חדש ← **הרחבות** ← הדביקו את הכתובת: [[https://github.com/YahboomTechnology/Tiny-bitLib]]"
         - "מופיעה קטגוריה חדשה בשם **Tinybit**. הציצו בבלוקים."
-        - "נסו: בתוך [[on start]] שימו [[RGB_Car_Big value Red]] והעבירו ללוח. הפנס האדום דולק?"
+        - "נסו: בתוך [[כאשר מתחיל]] שימו [[RGB_Car_Big value Red]] והעבירו ללוח. הפנס האדום דולק?"
       tip: "מכבים את הרובוט במתג כשלא משתמשים בו, כדי לחסוך בסוללה."
       challenge: "בדקו את כל הצבעים שהפנס יודע להציג."
     guide:
@@ -883,8 +948,8 @@ lessons:
       goal: "נדליק את הנורות הצבעוניות של הרובוט."
       concept: "בבלוק [[RGB_Car_Program]] קובעים צבע, ואז צריך [[show]] כדי שהנורות באמת יידלקו."
       steps:
-        - "ב-[[on start]]: [[show icon]] לב."
-        - "בתוך [[forever]]: [[RGB_Car_Program show color white]]."
+        - "ב-[[כאשר מתחיל]]: [[הצג את הסמל]] לב."
+        - "בתוך [[לעולמים]]: [[RGB_Car_Program show color white]]."
         - "מתחתיו: [[RGB_Car_Program show]]."
         - "העבירו לרובוט והדליקו את המתג."
       tip: "בלי [[show]] שום דבר לא נדלק – זה כמו לבחור צבע ולשכוח ללחוץ על המתג."
@@ -904,23 +969,23 @@ lessons:
     title: "אור נושם"
     source: tinybit
     level: intermediate
-    concepts: [לולאת for, משתנה, בהירות]
+    concepts: [לולאת עבור, משתנה, בהירות]
     summary: "האור מתחזק ונחלש לאט – כמו נשימה."
     student:
       goal: "נגרום לאור הכחול להתחזק ולהיחלש לאט, כאילו הרובוט נושם 😮‍💨."
-      concept: "לולאת **for** סופרת בשבילנו: 0, 1, 2... עד 255. בכל סיבוב המספר נשמר במשתנה, ואפשר להשתמש בו כ**בהירות**."
+      concept: "לולאת **עבור** סופרת בשבילנו: 0, 1, 2... עד 255. בכל סיבוב המספר נשמר במשתנה, ואפשר להשתמש בו כ**בהירות**."
       steps:
-        - "בתוך [[forever]] שימו [[for index from 0 to 255]] (שנו את שם המשתנה ל-a)."
-        - "בתוכה: [[RGB_Car_Program set brightness]] a, [[show color blue]], [[show]] ו-[[pause (ms) 10]]."
-        - "הוסיפו עוד לולאת for (משתנה b) שבה הבהירות היא 255 פחות b – כך האור נחלש."
+        - "בתוך [[לעולמים]] שימו [[עבור index מ- 0 ל 255]] (שנו את שם המשתנה ל-a)."
+        - "בתוכה: [[RGB_Car_Program set brightness]] a, [[show color blue]], [[show]] ו-[[השהה (ms) 10]]."
+        - "הוסיפו עוד לולאת עבור (משתנה b) שבה הבהירות היא 255 פחות b – כך האור נחלש."
         - "העבירו לרובוט והסתכלו."
       tip: "255 הוא הכי בהיר, 0 הוא כבוי."
       challenge: "גרמו לפנס הגדול לנשום יחד עם הנורות (רמז: [[RGB_Car_Big2]] עם a במקום הכחול)."
     guide:
       duration: "45 דקות"
-      objectives: ["לולאת for", "שימוש במשתנה הלולאה", "חיסור לקבלת ספירה לאחור"]
+      objectives: ["לולאת עבור", "שימוש במשתנה הלולאה", "חיסור לקבלת ספירה לאחור"]
       materials: ["Tiny:bit + micro:bit"]
-      common_mistakes: ["pause גדול מדי – הנשימה נמשכת דקה"]
+      common_mistakes: ["השהה גדול מדי – הנשימה נמשכת דקה"]
       extension: "לנשום בצבעים מתחלפים."
     images:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/5.Breathing%20light/Breathing%20light.png"
@@ -938,7 +1003,7 @@ lessons:
       goal: "נדליק את הפנס הגדול שבחזית הרובוט ונערבב צבעים."
       concept: "כל צבע על המסך מורכב משלושה אורות: **אדום, ירוק וכחול** (RGB). מערבבים אותם בכמויות שונות ומקבלים כל צבע!"
       steps:
-        - "בתוך [[forever]] שימו [[RGB_Car_Big value Red]]."
+        - "בתוך [[לעולמים]] שימו [[RGB_Car_Big value Red]]."
         - "העבירו לרובוט – הפנס אדום."
         - "עכשיו נסו [[RGB_Car_Big2]] עם שלושה מספרים (0–255): אדום, ירוק, כחול."
         - "נסו: 255, 0, 255 – איזה צבע יצא?"
@@ -948,7 +1013,7 @@ lessons:
       duration: "45 דקות"
       objectives: ["מודל צבעי RGB"]
       materials: ["Tiny:bit + micro:bit"]
-      extension: "כפתור A מחליף בין צבעים באקראי (pick random 0 to 255 לכל ערוץ)."
+      extension: "כפתור A מחליף בין צבעים באקראי (בחר מספר אקראי 0 ל 255 לכל ערוץ)."
     images:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/2.RGB%20Searching%20light/RGB-light-1.png"
     links:
@@ -964,10 +1029,10 @@ lessons:
     student:
       goal: "נהפוך את הרובוט למסיבת דיסקו 🪩 – הפנס יחליף צבעים בלי הפסקה."
       steps:
-        - "בתוך [[forever]]: [[RGB_Car_Big value Red]] ו-[[pause (ms) 500]]."
+        - "בתוך [[לעולמים]]: [[RGB_Car_Big value Red]] ו-[[השהה (ms) 500]]."
         - "הוסיפו אותו דבר עם Green, Blue, Yellow, Cyan, Pinkish, White."
         - "העבירו לרובוט."
-      tip: "מהירות הדיסקו תלויה ב-pause. נסו 100."
+      tip: "מהירות הדיסקו תלויה בזמן ההשהיה. נסו 100."
       challenge: "גרמו גם לנורות התחתונות להתחלף, בצבעים אחרים מהפנס."
     guide:
       duration: "45 דקות"
@@ -989,8 +1054,8 @@ lessons:
     student:
       goal: "נגרום לרובוט לנגן מנגינות."
       steps:
-        - "בתוך [[on button A pressed]] שימו [[Music_Car]] ובחרו מנגינה (למשל birthday)."
-        - "בתוך [[on button B pressed]] שימו מנגינה אחרת (למשל nyan)."
+        - "בתוך [[כאשר כפתור A לחוץ]] שימו [[Music_Car]] ובחרו מנגינה (למשל birthday)."
+        - "בתוך [[כאשר כפתור B לחוץ]] שימו מנגינה אחרת (למשל nyan)."
         - "העבירו לרובוט ולחצו על הכפתורים."
       tip: "לרובוט יש זמזם משלו, ולכן הצליל עובד גם עם micro:bit V1."
       challenge: "הדליקו צבע אחר בפנס עם כל מנגינה."
@@ -1014,7 +1079,7 @@ lessons:
     student:
       goal: "נכתוב שיר תו אחרי תו, ובכל תו הרובוט ידליק צבע אחר – הופעה של אור וצליל! 🎶"
       steps:
-        - "בתוך [[on button A pressed]] שימו [[play tone Middle C for 1/2 beat]]."
+        - "בתוך [[כאשר כפתור A לחוץ]] שימו [[נגן צליל Middle C ל- 1/2 פעימות]]."
         - "אחרי כל תו הוסיפו [[RGB_Car_Big value]] עם צבע אחר."
         - "המשיכו תו אחרי תו עד שהשיר נגמר."
         - "בסוף כבו את האור עם הצבע OFF."
@@ -1041,11 +1106,11 @@ lessons:
       goal: "הרובוט שלנו זז בפעם הראשונה! 🚗"
       concept: "הבלוק [[CarCtrl]] שולט בשני המנועים יחד: Run = קדימה, Back = אחורה, Stop = עצור."
       steps:
-        - "בתוך [[on button A pressed]]: [[CarCtrl Run]]."
-        - "בתוך [[on button B pressed]]: [[CarCtrl Stop]]."
+        - "בתוך [[כאשר כפתור A לחוץ]]: [[CarCtrl Run]]."
+        - "בתוך [[כאשר כפתור B לחוץ]]: [[CarCtrl Stop]]."
         - "העבירו לרובוט, **הניחו אותו על הרצפה** ולחצו A."
       tip: "⚠️ תמיד מורידים את הרובוט לרצפה לפני שמפעילים מנועים – לא על השולחן!"
-      challenge: "גרמו לרובוט לנסוע 2 שניות ולעצור לבד (רמז: [[pause]])."
+      challenge: "גרמו לרובוט לנסוע 2 שניות ולעצור לבד (רמז: [[השהה]])."
     guide:
       duration: "40 דקות"
       objectives: ["שליטה במנועים", "בטיחות"]
@@ -1067,7 +1132,7 @@ lessons:
     student:
       goal: "נלמד את הרובוט את כל הכיוונים, והמסך יראה חץ לכיוון הנסיעה."
       steps:
-        - "בתוך [[forever]]: [[show arrow]] (בחרו כיוון), [[CarCtrl Run]], [[pause (ms) 1000]]."
+        - "בתוך [[לעולמים]]: [[הצג חץ]] (בחרו כיוון), [[CarCtrl Run]], [[השהה (ms) 1000]]."
         - "הוסיפו: חץ, [[CarCtrl Back]], השהיה."
         - "הוסיפו: Left, Right, SpinLeft, SpinRight."
         - "בסוף [[CarCtrl Stop]]."
@@ -1093,8 +1158,8 @@ lessons:
       goal: "נשלוט במהירות של הרובוט – לאט, מהר, ועוד יותר מהר!"
       concept: "**פרמטר** הוא מספר שאנחנו נותנים לבלוק. ב-[[CarCtrlSpeed]] הפרמטר הוא המהירות: 0 עד 255."
       steps:
-        - "בתוך [[on button A pressed]]: [[CarCtrlSpeed Run speed 80]]."
-        - "בתוך [[on button B pressed]]: [[CarCtrlSpeed Run speed 200]]."
+        - "בתוך [[כאשר כפתור A לחוץ]]: [[CarCtrlSpeed Run speed 80]]."
+        - "בתוך [[כאשר כפתור B לחוץ]]: [[CarCtrlSpeed Run speed 200]]."
         - "השוו בין המהירויות."
         - "נסו את [[CarCtrlSpeed2]]: מהירות אחרת לכל גלגל. מה קורה כשגלגל אחד מהיר יותר?"
       tip: "במהירות נמוכה מדי (מתחת לבערך 50) הרובוט לא זז בכלל."
@@ -1120,8 +1185,8 @@ lessons:
       goal: "נכין לרובוט ריקוד עם מוזיקה ואורות 💃."
       steps:
         - "תכננו על דף: 6–8 צעדי ריקוד. בכל צעד – תו, תנועה וצבע."
-        - "לכל צעד: [[play tone]], [[CarCtrlSpeed]] עם תנועה, [[RGB_Car_Big value]] עם צבע."
-        - "שימו את הכול בתוך [[on button A pressed]]."
+        - "לכל צעד: [[נגן צליל]], [[CarCtrlSpeed]] עם תנועה, [[RGB_Car_Big value]] עם צבע."
+        - "שימו את הכול בתוך [[כאשר כפתור A לחוץ]]."
         - "בסוף: [[CarCtrl Stop]] והאורות כבויים."
       tip: "השתמשו בהרבה SpinLeft ו-SpinRight כדי שהרובוט יישאר באותו מקום."
       challenge: "סנכרנו שני רובוטים שירקדו יחד!"
@@ -1147,13 +1212,13 @@ lessons:
       steps:
         - "ציירו את המסלול על דף. כמה צעדים? כמה סיבובים?"
         - "גלו בניסוי: כמה מילישניות של [[CarCtrl SpinRight]] יוצרות סיבוב של 90 מעלות?"
-        - "ריבוע: [[repeat 4 times]] ← קדימה 1 שנייה, סיבוב 90°."
+        - "ריבוע: [[חזור 4 פעמים]] ← קדימה 1 שנייה, סיבוב 90°."
         - "בדקו, תקנו, ובדקו שוב."
       tip: "תיקון מספרים אחרי בדיקה הוא חלק רגיל מהעבודה של מהנדסים. לא מתייאשים!"
       challenge: "סמנו מבוך על הרצפה בסרט הדבקה ותכנתו את הרובוט לצאת ממנו."
     guide:
       duration: "90 דקות"
-      objectives: ["אלגוריתם", "כיול בניסוי וטעייה", "repeat"]
+      objectives: ["אלגוריתם", "כיול בניסוי וטעייה", "חזור"]
       materials: ["Tiny:bit + micro:bit", "סרט הדבקה צבעוני לסימון מסלולים"]
       prep: "לסמן מבוכים פשוטים על הרצפה לפני השיעור."
       common_mistakes: ["כיול על משטח אחד ובדיקה על משטח אחר", "סוללה נחלשת משנה את זמני הסיבוב"]
@@ -1171,7 +1236,7 @@ lessons:
       goal: "נשתמש ב'עיניים' של הרובוט כדי למדוד מרחקים."
       concept: "**חיישן אולטרסוני** שולח צליל גבוה שאנחנו לא שומעים, ומחכה להד. כמו עטלף! לפי הזמן שלוקח להד לחזור, הוא יודע מה המרחק."
       steps:
-        - "בתוך [[forever]]: [[show number]]."
+        - "בתוך [[לעולמים]]: [[הצג מספר]]."
         - "לתוכו: [[ultrasonic return distance(cm)]] (או [[ultrasonic for V2]] אם יש לכם micro:bit V2)."
         - "העבירו לרובוט והזיזו את היד מול החיישן."
         - "מדדו בסרגל ובדקו אם החיישן צודק."
@@ -1197,15 +1262,15 @@ lessons:
     student:
       goal: "נבנה רמזור: רחוק = ירוק, באמצע = צהוב, קרוב = אדום 🚦."
       steps:
-        - "צרו משתנה distance, ובתוך [[forever]] שמרו בו את המרחק מהחיישן."
-        - "[[if]] distance < 10 → [[RGB_Car_Big value Red]]."
-        - "[[else if]] distance < 20 → Yellow."
-        - "[[else]] → Green."
+        - "צרו משתנה distance, ובתוך [[לעולמים]] שמרו בו את המרחק מהחיישן."
+        - "[[אם]] distance < 10 → [[RGB_Car_Big value Red]]."
+        - "[[אחרת אם]] distance < 20 → Yellow."
+        - "[[אחרת]] → Green."
       tip: "שמירת המרחק במשתנה חוסכת קריאה כפולה של החיישן."
       challenge: "הוסיפו צפצוף כשהמכשול קרוב מאוד – כמו חיישן חנייה של מכונית."
     guide:
       duration: "45 דקות"
-      objectives: ["if / else if עם טווחים", "שימוש במשתנה לשמירת קריאה"]
+      objectives: ["אם / אחרת אם עם טווחים", "שימוש במשתנה לשמירת קריאה"]
       materials: ["Tiny:bit + micro:bit"]
       extension: "חיישן חנייה: צפצוף שמאיץ ככל שמתקרבים."
     links:
@@ -1221,9 +1286,9 @@ lessons:
     student:
       goal: "נבנה רובוט שנוסע לבד ולא נתקע בקירות! זה **רובוט אוטונומי** – הוא מחליט לבד."
       steps:
-        - "בתוך [[forever]]: [[if]] המרחק < 15."
-        - "אם כן → [[CarCtrlSpeed SpinLeft speed 80]] ו-[[pause (ms) 300]]."
-        - "[[else]] → [[CarCtrlSpeed Run speed 80]]."
+        - "בתוך [[לעולמים]]: [[אם]] המרחק < 15."
+        - "אם כן → [[CarCtrlSpeed SpinLeft speed 80]] ו-[[השהה (ms) 300]]."
+        - "[[אחרת]] → [[CarCtrlSpeed Run speed 80]]."
         - "בנו מסלול מכשולים מקופסאות ושחררו את הרובוט."
       tip: "החיישן לא תמיד רואה דברים רכים (בד) או דקים (רגל של כיסא)."
       challenge: "הוסיפו אורות: אדום כשמסתובב, ירוק כשנוסע."
@@ -1247,9 +1312,9 @@ lessons:
     student:
       goal: "נבנה רובוט פחדן 😱 שבורח אחורה כשמישהו מתקרב אליו."
       steps:
-        - "בתוך [[forever]]: [[if]] המרחק < 15."
+        - "בתוך [[לעולמים]]: [[אם]] המרחק < 15."
         - "אם כן → [[CarCtrl Back]], פרצוף מפוחד ופנס אדום."
-        - "[[else]] → [[CarCtrl Stop]] ופרצוף רגוע."
+        - "[[אחרת]] → [[CarCtrl Stop]] ופרצוף רגוע."
         - "קרבו את היד לרובוט לאט."
       tip: "זה כמעט אותו קוד כמו הימנעות ממכשולים – רק התגובה שונה."
       challenge: "צרו את ההפך: רובוט אמיץ שעוקב אחרי היד (מתקרב אם המרחק בין 15 ל-30)."
@@ -1272,13 +1337,13 @@ lessons:
     summary: "הרובוט עוקב אחרי קו שחור בעזרת שני חיישנים."
     student:
       goal: "נלמד את הרובוט לנסוע לבד על קו שחור – כמו רכבת על מסילה 🚂."
-      concept: "מתחת לרובוט יש **שני חיישני קו**: שמאלי וימני. כל אחד יודע אם הוא מעל שחור או מעל לבן. בעזרת **and** (וגם) בודקים את שניהם ביחד."
+      concept: "מתחת לרובוט יש **שני חיישני קו**: שמאלי וימני. כל אחד יודע אם הוא מעל שחור או מעל לבן. בעזרת **וגם** בודקים את שניהם ביחד."
       steps:
         - "שני החיישנים על לבן (הקו באמצע ביניהם) → [[CarCtrlSpeed Run speed 70]]."
         - "השמאלי על שחור והימני על לבן (הקו ברח שמאלה) → [[CarCtrlSpeed SpinLeft speed 70]]."
         - "השמאלי על לבן והימני על שחור → [[CarCtrlSpeed SpinRight speed 70]]."
         - "אחרת (שניהם על שחור) → [[CarCtrlSpeed Stop speed 0]]."
-        - "השתמשו ב-[[Line_Sensor direct LeftState value White Line]] וב-[[and]] מקטגוריית Logic."
+        - "השתמשו ב-[[Line_Sensor direct LeftState value White Line]] וב-[[וגם]] מקטגוריית לוגיקה."
       tip: "הקו צריך להיות ברוחב של בערך 2 ס״מ, ולא להיות רחב מהמרחק בין שני החיישנים."
       challenge: "הוסיפו אורות: כחול כשנוסע ישר, צהוב כשפונה."
     guide:
@@ -1331,10 +1396,10 @@ lessons:
     student:
       goal: "נדליק את האורות של הרובוט במחיאת כף 👏."
       steps:
-        - "בתוך [[forever]]: [[if]] [[Voice Sensor return]] [[>]] 100."
-        - "אם כן → [[RGB_Car_Program show color]] בצבע שאתם אוהבים, [[show]], ו-[[pause (ms) 1000]]."
+        - "בתוך [[לעולמים]]: [[אם]] [[Voice Sensor return]] [[>]] 100."
+        - "אם כן → [[RGB_Car_Program show color]] בצבע שאתם אוהבים, [[show]], ו-[[השהה (ms) 1000]]."
         - "אחרת → [[RGB_Car_Program clear]] ו-[[show]]."
-        - "קודם הציגו את ערך הקול עם [[show number]] כדי לבחור סף מתאים."
+        - "קודם הציגו את ערך הקול עם [[הצג מספר]] כדי לבחור סף מתאים."
       tip: "לרובוט יש מיקרופון משלו, ולכן זה עובד גם עם micro:bit V1."
       challenge: "בכל מחיאה – צבע אחר (רמז: משתנה שגדל ב-1)."
     guide:
@@ -1388,7 +1453,7 @@ lessons:
     student:
       goal: "נגרום לנורות שמתחת לרובוט להחליף צבעים ברצף."
       steps:
-        - "בתוך [[forever]]: [[RGB_Car_Program show color red]], [[show]], [[pause (ms) 500]]."
+        - "בתוך [[לעולמים]]: [[RGB_Car_Program show color red]], [[show]], [[השהה (ms) 500]]."
         - "חזרו על זה עם צבעים נוספים."
     images:
       - "https://raw.githubusercontent.com/YahboomTechnology/Tiny-bit/master/03.Light%20of%20Tiny%20bit/4.LED%20light%20exchange%20lighting/LED%20light%20exchange%20lighting_1.png"
@@ -1528,42 +1593,66 @@ lessons:
     source: microbit
     level: beginner
     summary: "מד צעדים שמציג את המספר רק בלחיצה, כדי לחסוך בסוללה."
-    links: { source: "https://microbit.org/projects/make-it-code-it/low-energy-step-counter/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/low-energy-step-counter/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_YmcPs9MiUT5J"
+          hex: "https://downloads.microbit.org/downloads/low-energy-step-counter-makecode.hex"
 
   - id: sensitive-step-counter
     title: "סופר צעדים רגיש"
     source: microbit
     level: intermediate
     summary: "מד צעדים שמשתמש במדידת כוח התאוצה במקום בזיהוי ניעור."
-    links: { source: "https://microbit.org/projects/make-it-code-it/sensitive-step-counter/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/sensitive-step-counter/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_bd1Jesg2YTpg"
+          hex: "https://downloads.microbit.org/downloads/sensitive-step-counter-makecode.hex"
 
   - id: get-silly
     title: "מצחיקים"
     source: microbit
     level: beginner
     summary: "פרצופים מצחיקים בלחיצות כפתורים."
-    links: { source: "https://microbit.org/projects/make-it-code-it/get-silly/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/get-silly/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_dkrYv67Ui9jW"
+          hex: "https://downloads.microbit.org/downloads/get-silly-makecode.hex"
 
   - id: shining-sunbeams
     title: "קרני שמש זוהרות"
     source: microbit
     level: beginner
     summary: "אנימציית שמש עם קרניים מהבהבות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/shining-sunbeams/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/shining-sunbeams/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_XTpPLoAX0edC"
+          hex: "https://downloads.microbit.org/downloads/shining-sunbeams-makecode.hex"
 
   - id: activity-picker
     title: "בוחר פעילויות"
     source: microbit
     level: beginner
     summary: "מנערים ומקבלים פעילות אקראית לעשות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/activity-picker/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/activity-picker/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_3mmA7TW7RK53"
+          hex: "https://downloads.microbit.org/downloads/activity-picker-sample-makecode.hex"
 
   - id: calming-leds
     title: "נורות מרגיעות"
     source: microbit
     level: beginner
     summary: "אנימציית נשימה שעוזרת להירגע."
-    links: { source: "https://microbit.org/projects/make-it-code-it/calming-leds/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/calming-leds/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Aym5Ce0mAUTe"
+          hex: "https://downloads.microbit.org/downloads/calming-le-ds-starter-makecode.hex"
 
   - id: disco-lights
     title: "אורות דיסקו"
@@ -1571,7 +1660,11 @@ lessons:
     level: beginner
     needs_v2: true
     summary: "האורות מהבהבים לפי עוצמת הקול."
-    links: { source: "https://microbit.org/projects/make-it-code-it/disco-lights/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/disco-lights/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_gqHhoy6uT8j4"
+          hex: "https://downloads.microbit.org/downloads/disco-lights-makecode.hex"
 
   - id: clap-lights
     title: "אורות במחיאת כף"
@@ -1579,7 +1672,11 @@ lessons:
     level: beginner
     needs_v2: true
     summary: "מחיאת כף מדליקה ומכבה את האור."
-    links: { source: "https://microbit.org/projects/make-it-code-it/clap-lights/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/clap-lights/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_JPsDsTYeJd5z"
+          hex: "https://downloads.microbit.org/downloads/clap-lights-makecode.hex"
 
   - id: touch-emotion-badge
     title: "תג רגשות במגע"
@@ -1587,56 +1684,88 @@ lessons:
     level: beginner
     needs_v2: true
     summary: "תג רגשות שמשתמש בלוגו המגע."
-    links: { source: "https://microbit.org/projects/make-it-code-it/touch-emotion-badge/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/touch-emotion-badge/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_MYX1XV9qyHWH"
+          hex: "https://downloads.microbit.org/downloads/touch-emotion-badge-makecode.hex"
 
   - id: metronome
     title: "מטרונום"
     source: microbit
     level: beginner
     summary: "מטרונום שמתקתק בקצב שאפשר לשנות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/metronome/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/metronome/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Lxt6F3DLfXEu"
+          hex: "https://downloads.microbit.org/downloads/metronome-makecode.hex"
 
   - id: which-way-now
     title: "לאן עכשיו?"
     source: microbit
     level: beginner
     summary: "מנערים ומקבלים חץ לכיוון אקראי."
-    links: { source: "https://microbit.org/projects/make-it-code-it/which-way-now/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/which-way-now/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_DbdPAXHm4Xgp"
+          hex: "https://downloads.microbit.org/downloads/which-way-now-makecode.hex"
 
   - id: snow-globe
     title: "כדור שלג"
     source: microbit
     level: beginner
     summary: "מנערים – ושלג יורד על המסך."
-    links: { source: "https://microbit.org/projects/make-it-code-it/snow-globe/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/snow-globe/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_cbVhLgUzhXEy"
+          hex: "https://downloads.microbit.org/downloads/snow-globe-makecode.hex"
 
   - id: compass-north
     title: "חץ צפונה"
     source: microbit
     level: intermediate
     summary: "חץ שתמיד מצביע לצפון."
-    links: { source: "https://microbit.org/projects/make-it-code-it/compass-north/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/compass-north/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Fxi79gEXmA72"
+          hex: "https://downloads.microbit.org/downloads/compass-north-makecode.hex"
 
   - id: max-min-thermometer
     title: "מדחום מקסימום-מינימום"
     source: microbit
     level: intermediate
     summary: "זוכר את הטמפרטורה הכי גבוהה והכי נמוכה."
-    links: { source: "https://microbit.org/projects/make-it-code-it/max-min-thermometer/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/max-min-thermometer/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_27VgywVTLHYV"
+          hex: "https://downloads.microbit.org/downloads/max-min-thermometer-makecode.hex"
 
   - id: frere-jacques-tune
     title: "אחינו יעקב בלולאות"
     source: microbit
     level: intermediate
     summary: "מנגינה שחוזרת על עצמה בעזרת לולאות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/frere-jacques-tune/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/frere-jacques-tune/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_C545kRP4aDm2"
+          hex: "https://downloads.microbit.org/downloads/frere-jacques-loops-frere-jacques-makecode.hex"
 
   - id: group-teleporting-duck
     title: "ברווז מטלפרט קבוצתי"
     source: microbit
     level: intermediate
     summary: "הברווז קופץ בין כמה לוחות בקבוצה."
-    links: { source: "https://microbit.org/projects/make-it-code-it/group-teleporting-duck/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/group-teleporting-duck/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_70E1U38g80xc"
+          hex: "https://downloads.microbit.org/downloads/group-teleporting-duck-makecode.hex"
 
   - id: jukebox-with-volume
     title: "תיבת נגינה עם עוצמה"
@@ -1644,28 +1773,48 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "תיבת נגינה שאפשר לשנות בה את עוצמת הקול."
-    links: { source: "https://microbit.org/projects/make-it-code-it/jukebox-with-volume/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/jukebox-with-volume/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_1TwRmcCfjT3L"
+          hex: "https://downloads.microbit.org/downloads/jukebox-with-volume-basic-makecode.hex"
 
   - id: spirit-level
     title: "פלס מים"
     source: microbit
     level: intermediate
     summary: "פלס שמראה אם משטח ישר."
-    links: { source: "https://microbit.org/projects/make-it-code-it/spirit-level/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/spirit-level/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_esA53UP5jfe1"
+          hex: "https://downloads.microbit.org/downloads/spirit-level-makecode.hex"
 
   - id: secure-messaging
     title: "הודעות מוצפנות"
     source: microbit
     level: intermediate
     summary: "שליחת הודעות סודיות ברדיו."
-    links: { source: "https://microbit.org/projects/make-it-code-it/secure-messaging/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/secure-messaging/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_7Mrha8AguX8T"
+          hex: "https://downloads.microbit.org/downloads/secure-messaging-makecode.hex"
 
   - id: hot-and-cold-game
     title: "חם וקר"
     source: microbit
     level: intermediate
     summary: "משחק חיפוש לפי עוצמת אות הרדיו."
-    links: { source: "https://microbit.org/projects/make-it-code-it/hot-and-cold-game/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/hot-and-cold-game/"
+      code:
+        - label: "המחביא"
+          makecode: "https://makecode.microbit.org/#pub:_YuWWDETetVkL"
+          hex: "https://downloads.microbit.org/downloads/hot-and-cold-game-hot-and-cold-game-hider-makecode.hex"
+        - label: "המחפש"
+          makecode: "https://makecode.microbit.org/#pub:_EEH5Ykd2Ri5t"
+          hex: "https://downloads.microbit.org/downloads/hot-and-cold-game-hot-and-code-game-seeker-makecode.hex"
 
   - id: clapometer
     title: "מד מחיאות כפיים"
@@ -1673,7 +1822,11 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "מודד כמה חזקות מחיאות הכפיים."
-    links: { source: "https://microbit.org/projects/make-it-code-it/clapometer/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/clapometer/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_WMi4U0RT84zE"
+          hex: "https://downloads.microbit.org/downloads/clap-o-meter-makecode.hex"
 
   - id: touch-stopwatch
     title: "שעון עצר במגע"
@@ -1681,7 +1834,11 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "שעון עצר שמופעל בנגיעה בלוגו."
-    links: { source: "https://microbit.org/projects/make-it-code-it/touch-stopwatch/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/touch-stopwatch/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_13aRi9FVhAeD"
+          hex: "https://downloads.microbit.org/downloads/touch-stopwatch-makecode.hex"
 
   - id: movement-data-logger
     title: "רשם נתוני תנועה"
@@ -1689,7 +1846,11 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "רושם נתוני תנועה לניתוח במחשב."
-    links: { source: "https://microbit.org/projects/make-it-code-it/movement-data-logger/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/movement-data-logger/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_UzueMJa7t5DC"
+          hex: "https://downloads.microbit.org/downloads/movement-data-logger-makecode.hex"
 
   - id: environment-data-logger
     title: "רשם נתוני סביבה"
@@ -1697,49 +1858,85 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "רושם טמפרטורה ואור לאורך זמן."
-    links: { source: "https://microbit.org/projects/make-it-code-it/environment-data-logger/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/environment-data-logger/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_PuXFj9Ds7baA"
+          hex: "https://downloads.microbit.org/downloads/environment-data-logger-makecode.hex"
 
   - id: reaction-game
     title: "משחק תגובה"
     source: microbit
     level: advanced
     summary: "מי לוחץ ראשון כשהאור נדלק?"
-    links: { source: "https://microbit.org/projects/make-it-code-it/reaction-game/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/reaction-game/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Vya0Xhf1zRtX"
+          hex: "https://downloads.microbit.org/downloads/reaction-game-makecode.hex"
 
   - id: fireflies
     title: "גחליליות"
     source: microbit
     level: advanced
     summary: "כמה לוחות מסנכרנים הבהובים ברדיו, כמו גחליליות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/fireflies/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/fireflies/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_XjpYC4X0K6F1"
+          hex: "https://downloads.microbit.org/downloads/fireflies-makecode.hex"
 
   - id: guitar-1-touch-tunes
     title: "גיטרה 1 – צלילים במגע"
     source: microbit
     level: advanced
     summary: "מנגנים בנגיעה בפינים."
-    links: { source: "https://microbit.org/projects/make-it-code-it/guitar-1-touch-tunes/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/guitar-1-touch-tunes/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_A67YTJ19o05p"
+          hex: "https://downloads.microbit.org/downloads/guitar-1-touch-tunes-makecode.hex"
 
   - id: proximity-beacon
     title: "משואת קרבה"
     source: microbit
     level: advanced
     summary: "מודדים כמה קרוב לוח אחר לפי עוצמת אות הרדיו."
-    links: { source: "https://microbit.org/projects/make-it-code-it/proximity-beacon/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/proximity-beacon/"
+      code:
+        - label: "המשואה (משדר)"
+          makecode: "https://makecode.microbit.org/#pub:_2hRFJ6WTWKgW"
+          hex: "https://downloads.microbit.org/downloads/proximity-beacon-proximity-beacon-transmitter-makecode.hex"
+        - label: "המקלט"
+          makecode: "https://makecode.microbit.org/#pub:_MciderdAVEfM"
+          hex: "https://downloads.microbit.org/downloads/proximity-beacon-proximity-receiver-makecode.hex"
 
   - id: door-alarm
     title: "אזעקת דלת ברדיו"
     source: microbit
     level: advanced
     summary: "לוח על הדלת שולח התראה ללוח אחר."
-    links: { source: "https://microbit.org/projects/make-it-code-it/door-alarm/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/door-alarm/"
+      code:
+        - label: "חיישן הדלת (משדר)"
+          makecode: "https://makecode.microbit.org/#pub:_iyMRX0K6D6jL"
+          hex: "https://downloads.microbit.org/downloads/radio-door-alarm-door-sensor-transmitter-makecode.hex"
+        - label: "האזעקה (מקלט)"
+          makecode: "https://makecode.microbit.org/#pub:_9bpMDr06f9qj"
+          hex: "https://downloads.microbit.org/downloads/radio-door-alarm-door-alarm-receiver-makecode.hex"
 
   - id: tilt-alarm
     title: "אזעקת הטיה מתקדמת"
     source: microbit
     level: advanced
     summary: "אזעקה עם הפעלה, כיבוי וצליל."
-    links: { source: "https://microbit.org/projects/make-it-code-it/tilt-alarm/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/tilt-alarm/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_4tuW6Mg3kRwR"
+          hex: "https://downloads.microbit.org/downloads/tilt-alarm-makecode.hex"
 
   - id: audible-cookie-tin-alarm
     title: "אזעקת קופסת עוגיות עם צליל"
@@ -1747,11 +1944,18 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "אזעקת הקופסה – עכשיו עם צליל."
-    links: { source: "https://microbit.org/projects/make-it-code-it/audible-cookie-tin-alarm/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/audible-cookie-tin-alarm/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_HJaCFY1o9Mf4"
+          hex: "https://downloads.microbit.org/downloads/audible-cookie-tin-alarm-makecode.hex"
 
   - id: ai-light-switch
     title: "מתג אור עם בינה מלאכותית"
     source: microbit
     level: intermediate
     summary: "מאמנים מודל לזהות תנועות שמדליקות אור."
-    links: { source: "https://microbit.org/projects/make-it-code-it/ai-light-switch/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/ai-light-switch/"
+      code:
+        - hex: "https://downloads.microbit.org/downloads/ai-light-switch-makecode.hex"

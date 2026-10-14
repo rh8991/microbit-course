@@ -14,7 +14,7 @@
 <body data-page="guide">
 <header class="site-header"><div class="inner">
   <a href="index.html"><img src="assets/logo.png" alt="טכנודע – המוזיאון הישראלי לרפואה ומדע, חדרה"></a>
-  <div class="course-name">מעבדת מיקרוביט</div>
+  <a class="course-name" href="index.html">מעבדת מיקרוביט</a>
   <nav><a href="index.html">דף הבית</a><a href="student.html">דף התלמידים</a></nav>
 </div></header>
 <main>
@@ -24,7 +24,7 @@
     <button role="tab" aria-selected="true" data-tab="tab-sessions">28 המפגשים</button>
     <button role="tab" aria-selected="false" data-tab="tab-bank">מאגר שיעורים נוסף</button>
   </div>
-  <section id="tab-sessions"><div id="sessions"><p>טוען…</p></div></section>
+  <section id="tab-sessions"><div id="course"><p class="loading">טוען…</p></div></section>
   <section id="tab-bank" hidden>
     <div class="filters">
       <select id="f-source" aria-label="מקור">
@@ -38,10 +38,10 @@
         <option value="intermediate">בינוני</option>
         <option value="advanced">מתקדם</option>
       </select>
-      <input id="f-search" type="search" placeholder="חיפוש…" aria-label="חיפוש">
+      <input id="f-search" type="search" placeholder="חיפוש במאגר…" aria-label="חיפוש במאגר">
       <span id="bank-count" class="tag"></span>
     </div>
-    <div id="bank" class="bank"></div>
+    <ul id="bank" class="bank"></ul>
   </section>
 </main>
 <footer class="site-footer">טכנודע – המוזיאון הישראלי לרפואה ומדע, חדרה · השיעורים מבוססים על <a href="https://microbit.org/projects/make-it-code-it/" target="_blank" rel="noopener">micro:bit Educational Foundation</a> ועל <a href="https://github.com/YahboomTechnology/Tiny-bit" target="_blank" rel="noopener">Yahboom Tiny:bit</a></footer>
