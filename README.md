@@ -22,6 +22,22 @@
 מעתיקים שיעור קיים בתוך `data/lessons.yml`, משנים את ה-`id`, וממלאים את השדות (ההסבר המלא נמצא בראש הקובץ).
 בתוך טקסט אפשר לכתוב `**מודגש**`, ושם בלוק בתוך `[[...]]`.
 
+## כפתורי הקוד (MakeCode + HEX)
+לכל שיעור micro:bit יש בתוך `links` רשימת `code`, שממנה נבנים הכפתורים "פתיחה ב-MakeCode" ו"הורדת קובץ HEX":
+```yaml
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/heart/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_1M2V0eiFb7jJ"
+          hex: "https://downloads.microbit.org/downloads/heart-hearts-makecode.hex"
+```
+- את הקישורים לוקחים מכפתורי "Open in MakeCode" ו-"Download HEX" בדף השיעור המקורי ב-microbit.org.
+- בשיעור עם שתי תוכניות (משדר ומקלט) מוסיפים שני פריטים, ולכל אחד `label`.
+- שיעור בלי `code` מקבל כפתור "פתיחת MakeCode" כללי מתוך `makecode`.
+
+## חיפוש
+בדפי התלמיד והמדריך יש חיפוש לפי מילות מפתח: שם השיעור, `concepts`, שמות בלוקים, שם המפגש והטקסט של השיעור. מספר לבד (למשל `5`) מציג את שיעורי המפגש. תלמידים מחפשים רק בשיעורים המשובצים; מדריכים מחפשים גם במאגר.
+
 ## צפייה במחשב
 צריך שרת מקומי, כי פתיחה ישירה של הקובץ לא טוענת את הנתונים. למשל:
 - ב-VS Code: התוסף **Live Server** ← Open with Live Server

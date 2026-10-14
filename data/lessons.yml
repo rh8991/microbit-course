@@ -11,7 +11,8 @@
 #    student    – intro, goal, concept, steps (רשימה), tip, challenge
 #    guide      – duration, objectives, materials, prep, flow, common_mistakes, extension
 #    images     – תמונות קוד (קישורים)
-#    links      – source (השיעור המקורי), makecode
+#    links      – source (השיעור המקורי), makecode (קישור כללי)
+#                 code – רשימת תוכניות: label (רשות, כשיש כמה), makecode (#pub), hex
 #  עיצוב בתוך טקסט:  **מודגש**   ו-  [[שם בלוק]]
 #  שיעור שלא משובץ ב-schedule.yml מופיע אוטומטית במאגר השיעורים הנוסף.
 # ============================================================
@@ -60,7 +61,9 @@ lessons:
       extension: "לגלות מה עושה כפתור ה-Reset בגב הלוח."
     links:
       source: "https://microbit.org/projects/make-it-code-it/meet-your-microbit/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_95o2F2hd3eJp"
+          hex: "https://downloads.microbit.org/downloads/meet-your-micro-bit-makecode.hex"
 
   - id: heart
     title: "לב"
@@ -90,7 +93,9 @@ lessons:
       extension: "לצייר 3 אייקונים שונים בזה אחר זה עם show leds."
     links:
       source: "https://microbit.org/projects/make-it-code-it/heart/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_1M2V0eiFb7jJ"
+          hex: "https://downloads.microbit.org/downloads/heart-hearts-makecode.hex"
 
   - id: beating-heart
     title: "לב פועם"
@@ -120,7 +125,9 @@ lessons:
       extension: "למדוד דופק אמיתי בדקה ולהתאים את מהירות הפעימה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/beating-heart/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_AUiYbFHgp6wK"
+          hex: "https://downloads.microbit.org/downloads/beating-heart-makecode.hex"
 
   - id: animated-animals
     title: "חיות מונפשות"
@@ -146,7 +153,9 @@ lessons:
       extension: "חיה שמשנה כיוון כשלוחצים על כפתור."
     links:
       source: "https://microbit.org/projects/make-it-code-it/animated-animals/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_J9rK89hgJJRV"
+          hex: "https://downloads.microbit.org/downloads/animated-animals-makecode.hex"
 
   - id: emotion-badge
     title: "תג רגשות"
@@ -174,7 +183,9 @@ lessons:
       extension: "לצייר פרצופים עם show leds במקום האייקונים המוכנים."
     links:
       source: "https://microbit.org/projects/make-it-code-it/emotion-badge/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_d4aPaHUrmcX4"
+          hex: "https://downloads.microbit.org/downloads/emotion-badge-makecode.hex"
 
   - id: flashing-emotions
     title: "רגשות מהבהבים"
@@ -199,7 +210,9 @@ lessons:
       extension: "הבהוב במהירות שונה לכל רגש."
     links:
       source: "https://microbit.org/projects/make-it-code-it/flashing-emotions/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_2DRXqjK1dc3R"
+          hex: "https://downloads.microbit.org/downloads/flashing-emotions-makecode.hex"
 
   - id: name-badge
     title: "תג שם"
@@ -224,7 +237,9 @@ lessons:
       extension: "כפתור A מציג את השם, כפתור B את הגיל או את הכיתה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/name-badge/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Lme8X5Lq5RXE"
+          hex: "https://downloads.microbit.org/downloads/name-badge-makecode.hex"
 
   - id: here-comes-the-sun
     title: "הנה באה השמש"
@@ -247,7 +262,9 @@ lessons:
       extension: "כפתור A = זריחה, כפתור B = שקיעה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/here-comes-the-sun/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_WAP3mJ7dpWTe"
+          hex: "https://downloads.microbit.org/downloads/here-comes-the-sun-makecode.hex"
 
   - id: dice
     title: "קובייה"
@@ -275,7 +292,9 @@ lessons:
       extension: "לספור כמה פעמים יצא כל מספר (מקדים את נושא המשתנים)."
     links:
       source: "https://microbit.org/projects/make-it-code-it/dice/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_hUpi4RFKjJF7"
+          hex: "https://downloads.microbit.org/downloads/dice-makecode.hex"
 
   - id: graphical-dice
     title: "קובייה גרפית"
@@ -302,7 +321,9 @@ lessons:
       extension: "שתי קוביות: כפתור A וכפתור B."
     links:
       source: "https://microbit.org/projects/make-it-code-it/graphical-dice/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Em9XRuEpaERr"
+          hex: "https://downloads.microbit.org/downloads/graphical-dice-makecode.hex"
 
   - id: rock-paper-scissors
     title: "אבן, נייר ומספריים"
@@ -329,7 +350,9 @@ lessons:
       extension: "גרסה בשני לוחות שמשדרים זה לזה ברדיו (קשור למפגש 12)."
     links:
       source: "https://microbit.org/projects/make-it-code-it/rock-paper-scissors/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_arUf8fFvXX9w"
+          hex: "https://downloads.microbit.org/downloads/rock-paper-scissors-makecode.hex"
 
   - id: magic-8ball
     title: "כדור הקסם"
@@ -353,7 +376,9 @@ lessons:
       extension: "להשתמש במערך (array) של תשובות במקום if (לתלמידים מתקדמים)."
     links:
       source: "https://microbit.org/projects/make-it-code-it/magic-8ball/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_V7FAm44TyfFT"
+          hex: "https://downloads.microbit.org/downloads/magic-8-ball-makecode.hex"
 
   - id: counter
     title: "מונה"
@@ -379,7 +404,9 @@ lessons:
       extension: "מונה שמשמיע צליל בכל 10."
     links:
       source: "https://microbit.org/projects/make-it-code-it/counter/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_JM345hbMLTyM"
+          hex: "https://downloads.microbit.org/downloads/counter-simple-makecode.hex"
 
   - id: step-counter
     title: "סופר צעדים"
@@ -404,7 +431,9 @@ lessons:
       extension: "הגרסה החסכונית (low-energy-step-counter) או הגרסה הרגישה (sensitive-step-counter) מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/step-counter/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_E6uhUWKEqL1L"
+          hex: "https://downloads.microbit.org/downloads/step-counter-makecode.hex"
 
   - id: nightlight
     title: "מנורת לילה"
@@ -431,7 +460,9 @@ lessons:
       extension: "בהירות שמשתנה בהדרגה לפי רמת האור (set brightness)."
     links:
       source: "https://microbit.org/projects/make-it-code-it/nightlight/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_dz7W7hWM2AdR"
+          hex: "https://downloads.microbit.org/downloads/nightlight-makecode.hex"
 
   - id: sunlight-sensor
     title: "חיישן שמש"
@@ -456,7 +487,9 @@ lessons:
       extension: "לצאת החוצה ולמדוד אור בצל ובשמש."
     links:
       source: "https://microbit.org/projects/make-it-code-it/sunlight-sensor/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_cetA5h6DF41v"
+          hex: "https://downloads.microbit.org/downloads/sunlight-sensor-makecode.hex"
 
   - id: thermometer
     title: "מדחום"
@@ -481,7 +514,9 @@ lessons:
       extension: "מדחום מקסימום-מינימום (max-min-thermometer) מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/thermometer/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_fEaXEL7KUU4x"
+          hex: "https://downloads.microbit.org/downloads/thermometer-makecode.hex"
 
   - id: compass-bearing
     title: "מצפן"
@@ -506,7 +541,9 @@ lessons:
       extension: "compass-north מהמאגר – חץ שתמיד מצביע צפונה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/compass-bearing/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_716cyLFpP66A"
+          hex: "https://downloads.microbit.org/downloads/compass-bearing-makecode.hex"
 
   - id: jukebox
     title: "תיבת נגינה"
@@ -531,7 +568,9 @@ lessons:
       extension: "jukebox-with-volume מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/jukebox/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_guCi12DwYUKA"
+          hex: "https://downloads.microbit.org/downloads/jukebox-makecode.hex"
 
   - id: make-some-noise
     title: "עושים רעש"
@@ -554,7 +593,9 @@ lessons:
       extension: "frere-jacques-tune מהמאגר – מנגינה עם לולאות."
     links:
       source: "https://microbit.org/projects/make-it-code-it/make-some-noise/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_DbcgCAdAKeE6"
+          hex: "https://downloads.microbit.org/downloads/make-some-noise-makecode.hex"
 
   - id: sound-meter
     title: "מד רעש"
@@ -579,7 +620,9 @@ lessons:
       extension: "להשאיר את מד הרעש פועל בכיתה כמחוון שקט."
     links:
       source: "https://microbit.org/projects/make-it-code-it/sound-meter/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Wzy8zrW2i8th"
+          hex: "https://downloads.microbit.org/downloads/sound-meter-makecode.hex"
 
   - id: clap-hearts
     title: "לבבות במחיאת כף"
@@ -603,7 +646,9 @@ lessons:
       extension: "clap-lights מהמאגר – מדליק ומכבה במחיאה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/clap-hearts/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_AhPKDR2UDf7H"
+          hex: "https://downloads.microbit.org/downloads/clap-hearts-makecode.hex"
 
   - id: teleporting-duck
     title: "ברווז מטלפרט"
@@ -630,7 +675,9 @@ lessons:
       extension: "group-teleporting-duck מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/teleporting-duck/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_W9id6YdkMME9"
+          hex: "https://downloads.microbit.org/downloads/teleporting-duck-makecode.hex"
 
   - id: send-a-smile
     title: "שולחים חיוך"
@@ -654,7 +701,9 @@ lessons:
       extension: "secure-messaging מהמאגר – הודעות מוצפנות."
     links:
       source: "https://microbit.org/projects/make-it-code-it/send-a-smile/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_TJmWc1MhsKCd"
+          hex: "https://downloads.microbit.org/downloads/send-a-smile-makecode.hex"
 
   - id: simple-tilt-alarm
     title: "אזעקת הטיה"
@@ -679,7 +728,9 @@ lessons:
       extension: "tilt-alarm (מתקדם) מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/simple-tilt-alarm/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_FuiW8VFPwg36"
+          hex: "https://downloads.microbit.org/downloads/simple-tilt-alarm-simple-door-alarm-makecode.hex"
 
   - id: cookie-tin-alarm
     title: "אזעקת קופסת עוגיות"
@@ -704,7 +755,9 @@ lessons:
       extension: "audible-cookie-tin-alarm מהמאגר."
     links:
       source: "https://microbit.org/projects/make-it-code-it/cookie-tin-alarm/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_7yKVKiLX00Rs"
+          hex: "https://downloads.microbit.org/downloads/cookie-tin-alarm-makecode.hex"
 
   - id: hot-potato-game
     title: "תפוח אדמה לוהט"
@@ -732,7 +785,9 @@ lessons:
       extension: "טיקטוק שמאיץ ככל שהזמן אוזל."
     links:
       source: "https://microbit.org/projects/make-it-code-it/hot-potato-game/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_cKEYtihoMW54"
+          hex: "https://downloads.microbit.org/downloads/hot-potato-game-makecode.hex"
 
   - id: times-tables-tester
     title: "בוחן לוח הכפל"
@@ -756,7 +811,9 @@ lessons:
       extension: "ניקוד: A+B אם צדקתי, והמונה עולה."
     links:
       source: "https://microbit.org/projects/make-it-code-it/times-tables-tester/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_fHxHYaPrm1gr"
+          hex: "https://downloads.microbit.org/downloads/times-tables-tester-makecode.hex"
 
   - id: microbit-pet
     title: "חיית מחמד במיקרוביט"
@@ -783,7 +840,9 @@ lessons:
       extension: "מצבים נוספים: רעב, משועמם."
     links:
       source: "https://microbit.org/projects/make-it-code-it/microbit-pet/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_28F66oD2X6mz"
+          hex: "https://downloads.microbit.org/downloads/micro-bit-pet-makecode.hex"
 
   - id: treasure-hunt
     title: "ציד אוצרות"
@@ -808,7 +867,13 @@ lessons:
       extension: "proximity-beacon מהמאגר – מדידת קרבה לפי עוצמת אות."
     links:
       source: "https://microbit.org/projects/make-it-code-it/treasure-hunt/"
-      makecode: "https://makecode.microbit.org/"
+      code:
+        - label: "המשואה (משדר)"
+          makecode: "https://makecode.microbit.org/#pub:_73dMchDJmRMU"
+          hex: "https://downloads.microbit.org/downloads/treasure-hunt-treasure-hunt-beacon-makecode.hex"
+        - label: "המקלט"
+          makecode: "https://makecode.microbit.org/#pub:_h3g067gjK2CW"
+          hex: "https://downloads.microbit.org/downloads/treasure-hunt-treasure-hunt-receiver-makecode.hex"
 
   - id: project-part-a
     title: "פרויקט סיכום – חלק א׳"
@@ -1528,42 +1593,66 @@ lessons:
     source: microbit
     level: beginner
     summary: "מד צעדים שמציג את המספר רק בלחיצה, כדי לחסוך בסוללה."
-    links: { source: "https://microbit.org/projects/make-it-code-it/low-energy-step-counter/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/low-energy-step-counter/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_YmcPs9MiUT5J"
+          hex: "https://downloads.microbit.org/downloads/low-energy-step-counter-makecode.hex"
 
   - id: sensitive-step-counter
     title: "סופר צעדים רגיש"
     source: microbit
     level: intermediate
     summary: "מד צעדים שמשתמש במדידת כוח התאוצה במקום בזיהוי ניעור."
-    links: { source: "https://microbit.org/projects/make-it-code-it/sensitive-step-counter/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/sensitive-step-counter/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_bd1Jesg2YTpg"
+          hex: "https://downloads.microbit.org/downloads/sensitive-step-counter-makecode.hex"
 
   - id: get-silly
     title: "מצחיקים"
     source: microbit
     level: beginner
     summary: "פרצופים מצחיקים בלחיצות כפתורים."
-    links: { source: "https://microbit.org/projects/make-it-code-it/get-silly/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/get-silly/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_dkrYv67Ui9jW"
+          hex: "https://downloads.microbit.org/downloads/get-silly-makecode.hex"
 
   - id: shining-sunbeams
     title: "קרני שמש זוהרות"
     source: microbit
     level: beginner
     summary: "אנימציית שמש עם קרניים מהבהבות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/shining-sunbeams/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/shining-sunbeams/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_XTpPLoAX0edC"
+          hex: "https://downloads.microbit.org/downloads/shining-sunbeams-makecode.hex"
 
   - id: activity-picker
     title: "בוחר פעילויות"
     source: microbit
     level: beginner
     summary: "מנערים ומקבלים פעילות אקראית לעשות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/activity-picker/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/activity-picker/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_3mmA7TW7RK53"
+          hex: "https://downloads.microbit.org/downloads/activity-picker-sample-makecode.hex"
 
   - id: calming-leds
     title: "נורות מרגיעות"
     source: microbit
     level: beginner
     summary: "אנימציית נשימה שעוזרת להירגע."
-    links: { source: "https://microbit.org/projects/make-it-code-it/calming-leds/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/calming-leds/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Aym5Ce0mAUTe"
+          hex: "https://downloads.microbit.org/downloads/calming-le-ds-starter-makecode.hex"
 
   - id: disco-lights
     title: "אורות דיסקו"
@@ -1571,7 +1660,11 @@ lessons:
     level: beginner
     needs_v2: true
     summary: "האורות מהבהבים לפי עוצמת הקול."
-    links: { source: "https://microbit.org/projects/make-it-code-it/disco-lights/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/disco-lights/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_gqHhoy6uT8j4"
+          hex: "https://downloads.microbit.org/downloads/disco-lights-makecode.hex"
 
   - id: clap-lights
     title: "אורות במחיאת כף"
@@ -1579,7 +1672,11 @@ lessons:
     level: beginner
     needs_v2: true
     summary: "מחיאת כף מדליקה ומכבה את האור."
-    links: { source: "https://microbit.org/projects/make-it-code-it/clap-lights/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/clap-lights/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_JPsDsTYeJd5z"
+          hex: "https://downloads.microbit.org/downloads/clap-lights-makecode.hex"
 
   - id: touch-emotion-badge
     title: "תג רגשות במגע"
@@ -1587,56 +1684,88 @@ lessons:
     level: beginner
     needs_v2: true
     summary: "תג רגשות שמשתמש בלוגו המגע."
-    links: { source: "https://microbit.org/projects/make-it-code-it/touch-emotion-badge/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/touch-emotion-badge/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_MYX1XV9qyHWH"
+          hex: "https://downloads.microbit.org/downloads/touch-emotion-badge-makecode.hex"
 
   - id: metronome
     title: "מטרונום"
     source: microbit
     level: beginner
     summary: "מטרונום שמתקתק בקצב שאפשר לשנות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/metronome/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/metronome/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Lxt6F3DLfXEu"
+          hex: "https://downloads.microbit.org/downloads/metronome-makecode.hex"
 
   - id: which-way-now
     title: "לאן עכשיו?"
     source: microbit
     level: beginner
     summary: "מנערים ומקבלים חץ לכיוון אקראי."
-    links: { source: "https://microbit.org/projects/make-it-code-it/which-way-now/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/which-way-now/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_DbdPAXHm4Xgp"
+          hex: "https://downloads.microbit.org/downloads/which-way-now-makecode.hex"
 
   - id: snow-globe
     title: "כדור שלג"
     source: microbit
     level: beginner
     summary: "מנערים – ושלג יורד על המסך."
-    links: { source: "https://microbit.org/projects/make-it-code-it/snow-globe/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/snow-globe/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_cbVhLgUzhXEy"
+          hex: "https://downloads.microbit.org/downloads/snow-globe-makecode.hex"
 
   - id: compass-north
     title: "חץ צפונה"
     source: microbit
     level: intermediate
     summary: "חץ שתמיד מצביע לצפון."
-    links: { source: "https://microbit.org/projects/make-it-code-it/compass-north/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/compass-north/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Fxi79gEXmA72"
+          hex: "https://downloads.microbit.org/downloads/compass-north-makecode.hex"
 
   - id: max-min-thermometer
     title: "מדחום מקסימום-מינימום"
     source: microbit
     level: intermediate
     summary: "זוכר את הטמפרטורה הכי גבוהה והכי נמוכה."
-    links: { source: "https://microbit.org/projects/make-it-code-it/max-min-thermometer/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/max-min-thermometer/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_27VgywVTLHYV"
+          hex: "https://downloads.microbit.org/downloads/max-min-thermometer-makecode.hex"
 
   - id: frere-jacques-tune
     title: "אחינו יעקב בלולאות"
     source: microbit
     level: intermediate
     summary: "מנגינה שחוזרת על עצמה בעזרת לולאות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/frere-jacques-tune/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/frere-jacques-tune/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_C545kRP4aDm2"
+          hex: "https://downloads.microbit.org/downloads/frere-jacques-loops-frere-jacques-makecode.hex"
 
   - id: group-teleporting-duck
     title: "ברווז מטלפרט קבוצתי"
     source: microbit
     level: intermediate
     summary: "הברווז קופץ בין כמה לוחות בקבוצה."
-    links: { source: "https://microbit.org/projects/make-it-code-it/group-teleporting-duck/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/group-teleporting-duck/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_70E1U38g80xc"
+          hex: "https://downloads.microbit.org/downloads/group-teleporting-duck-makecode.hex"
 
   - id: jukebox-with-volume
     title: "תיבת נגינה עם עוצמה"
@@ -1644,28 +1773,48 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "תיבת נגינה שאפשר לשנות בה את עוצמת הקול."
-    links: { source: "https://microbit.org/projects/make-it-code-it/jukebox-with-volume/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/jukebox-with-volume/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_1TwRmcCfjT3L"
+          hex: "https://downloads.microbit.org/downloads/jukebox-with-volume-basic-makecode.hex"
 
   - id: spirit-level
     title: "פלס מים"
     source: microbit
     level: intermediate
     summary: "פלס שמראה אם משטח ישר."
-    links: { source: "https://microbit.org/projects/make-it-code-it/spirit-level/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/spirit-level/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_esA53UP5jfe1"
+          hex: "https://downloads.microbit.org/downloads/spirit-level-makecode.hex"
 
   - id: secure-messaging
     title: "הודעות מוצפנות"
     source: microbit
     level: intermediate
     summary: "שליחת הודעות סודיות ברדיו."
-    links: { source: "https://microbit.org/projects/make-it-code-it/secure-messaging/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/secure-messaging/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_7Mrha8AguX8T"
+          hex: "https://downloads.microbit.org/downloads/secure-messaging-makecode.hex"
 
   - id: hot-and-cold-game
     title: "חם וקר"
     source: microbit
     level: intermediate
     summary: "משחק חיפוש לפי עוצמת אות הרדיו."
-    links: { source: "https://microbit.org/projects/make-it-code-it/hot-and-cold-game/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/hot-and-cold-game/"
+      code:
+        - label: "המחביא"
+          makecode: "https://makecode.microbit.org/#pub:_YuWWDETetVkL"
+          hex: "https://downloads.microbit.org/downloads/hot-and-cold-game-hot-and-cold-game-hider-makecode.hex"
+        - label: "המחפש"
+          makecode: "https://makecode.microbit.org/#pub:_EEH5Ykd2Ri5t"
+          hex: "https://downloads.microbit.org/downloads/hot-and-cold-game-hot-and-code-game-seeker-makecode.hex"
 
   - id: clapometer
     title: "מד מחיאות כפיים"
@@ -1673,7 +1822,11 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "מודד כמה חזקות מחיאות הכפיים."
-    links: { source: "https://microbit.org/projects/make-it-code-it/clapometer/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/clapometer/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_WMi4U0RT84zE"
+          hex: "https://downloads.microbit.org/downloads/clap-o-meter-makecode.hex"
 
   - id: touch-stopwatch
     title: "שעון עצר במגע"
@@ -1681,7 +1834,11 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "שעון עצר שמופעל בנגיעה בלוגו."
-    links: { source: "https://microbit.org/projects/make-it-code-it/touch-stopwatch/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/touch-stopwatch/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_13aRi9FVhAeD"
+          hex: "https://downloads.microbit.org/downloads/touch-stopwatch-makecode.hex"
 
   - id: movement-data-logger
     title: "רשם נתוני תנועה"
@@ -1689,7 +1846,11 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "רושם נתוני תנועה לניתוח במחשב."
-    links: { source: "https://microbit.org/projects/make-it-code-it/movement-data-logger/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/movement-data-logger/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_UzueMJa7t5DC"
+          hex: "https://downloads.microbit.org/downloads/movement-data-logger-makecode.hex"
 
   - id: environment-data-logger
     title: "רשם נתוני סביבה"
@@ -1697,49 +1858,85 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "רושם טמפרטורה ואור לאורך זמן."
-    links: { source: "https://microbit.org/projects/make-it-code-it/environment-data-logger/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/environment-data-logger/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_PuXFj9Ds7baA"
+          hex: "https://downloads.microbit.org/downloads/environment-data-logger-makecode.hex"
 
   - id: reaction-game
     title: "משחק תגובה"
     source: microbit
     level: advanced
     summary: "מי לוחץ ראשון כשהאור נדלק?"
-    links: { source: "https://microbit.org/projects/make-it-code-it/reaction-game/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/reaction-game/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_Vya0Xhf1zRtX"
+          hex: "https://downloads.microbit.org/downloads/reaction-game-makecode.hex"
 
   - id: fireflies
     title: "גחליליות"
     source: microbit
     level: advanced
     summary: "כמה לוחות מסנכרנים הבהובים ברדיו, כמו גחליליות."
-    links: { source: "https://microbit.org/projects/make-it-code-it/fireflies/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/fireflies/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_XjpYC4X0K6F1"
+          hex: "https://downloads.microbit.org/downloads/fireflies-makecode.hex"
 
   - id: guitar-1-touch-tunes
     title: "גיטרה 1 – צלילים במגע"
     source: microbit
     level: advanced
     summary: "מנגנים בנגיעה בפינים."
-    links: { source: "https://microbit.org/projects/make-it-code-it/guitar-1-touch-tunes/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/guitar-1-touch-tunes/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_A67YTJ19o05p"
+          hex: "https://downloads.microbit.org/downloads/guitar-1-touch-tunes-makecode.hex"
 
   - id: proximity-beacon
     title: "משואת קרבה"
     source: microbit
     level: advanced
     summary: "מודדים כמה קרוב לוח אחר לפי עוצמת אות הרדיו."
-    links: { source: "https://microbit.org/projects/make-it-code-it/proximity-beacon/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/proximity-beacon/"
+      code:
+        - label: "המשואה (משדר)"
+          makecode: "https://makecode.microbit.org/#pub:_2hRFJ6WTWKgW"
+          hex: "https://downloads.microbit.org/downloads/proximity-beacon-proximity-beacon-transmitter-makecode.hex"
+        - label: "המקלט"
+          makecode: "https://makecode.microbit.org/#pub:_MciderdAVEfM"
+          hex: "https://downloads.microbit.org/downloads/proximity-beacon-proximity-receiver-makecode.hex"
 
   - id: door-alarm
     title: "אזעקת דלת ברדיו"
     source: microbit
     level: advanced
     summary: "לוח על הדלת שולח התראה ללוח אחר."
-    links: { source: "https://microbit.org/projects/make-it-code-it/door-alarm/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/door-alarm/"
+      code:
+        - label: "חיישן הדלת (משדר)"
+          makecode: "https://makecode.microbit.org/#pub:_iyMRX0K6D6jL"
+          hex: "https://downloads.microbit.org/downloads/radio-door-alarm-door-sensor-transmitter-makecode.hex"
+        - label: "האזעקה (מקלט)"
+          makecode: "https://makecode.microbit.org/#pub:_9bpMDr06f9qj"
+          hex: "https://downloads.microbit.org/downloads/radio-door-alarm-door-alarm-receiver-makecode.hex"
 
   - id: tilt-alarm
     title: "אזעקת הטיה מתקדמת"
     source: microbit
     level: advanced
     summary: "אזעקה עם הפעלה, כיבוי וצליל."
-    links: { source: "https://microbit.org/projects/make-it-code-it/tilt-alarm/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/tilt-alarm/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_4tuW6Mg3kRwR"
+          hex: "https://downloads.microbit.org/downloads/tilt-alarm-makecode.hex"
 
   - id: audible-cookie-tin-alarm
     title: "אזעקת קופסת עוגיות עם צליל"
@@ -1747,11 +1944,18 @@ lessons:
     level: intermediate
     needs_v2: true
     summary: "אזעקת הקופסה – עכשיו עם צליל."
-    links: { source: "https://microbit.org/projects/make-it-code-it/audible-cookie-tin-alarm/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/audible-cookie-tin-alarm/"
+      code:
+        - makecode: "https://makecode.microbit.org/#pub:_HJaCFY1o9Mf4"
+          hex: "https://downloads.microbit.org/downloads/audible-cookie-tin-alarm-makecode.hex"
 
   - id: ai-light-switch
     title: "מתג אור עם בינה מלאכותית"
     source: microbit
     level: intermediate
     summary: "מאמנים מודל לזהות תנועות שמדליקות אור."
-    links: { source: "https://microbit.org/projects/make-it-code-it/ai-light-switch/" }
+    links:
+      source: "https://microbit.org/projects/make-it-code-it/ai-light-switch/"
+      code:
+        - hex: "https://downloads.microbit.org/downloads/ai-light-switch-makecode.hex"
