@@ -387,6 +387,19 @@ function setupTabs(main) {
 /*  Lesson page                                                        */
 /* ------------------------------------------------------------------ */
 
+// MakeCode always opens in Hebrew: its editor takes the UI language from "lang=" in the URL,
+// ahead of the user's saved setting. Works for project links (#pub:…) and for the plain editor.
+function makecodeUrl(url) {
+  try {
+    const u = new URL(url);
+    if (!/(^|\.)makecode\.microbit\.org$/.test(u.hostname)) return url;
+    u.searchParams.set("lang", "he");
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
+
 function codeHtml(links) {
   const programs = links.code || [];
   if (!programs.length) {
@@ -394,7 +407,7 @@ function codeHtml(links) {
     return `<section class="lesson-section code-panel">
       <h2>${icon("code")}כותבים את הקוד</h2>
       <p class="code-help">פותחים פרויקט חדש ב-MakeCode ובונים את הקוד לפי השלבים.</p>
-      <div class="code-actions"><a class="btn" href="${esc(links.makecode)}" target="_blank" rel="noopener">${icon("external")}פתיחת MakeCode</a></div>
+      <div class="code-actions"><a class="btn" href="${esc(makecodeUrl(links.makecode))}" target="_blank" rel="noopener">${icon("external")}פתיחת MakeCode</a></div>
     </section>`;
   }
   const items = programs
@@ -402,7 +415,7 @@ function codeHtml(links) {
       (p) => `<div class="program">
         ${p.label ? `<h3>${esc(p.label)}</h3>` : ""}
         <div class="code-actions">
-          ${p.makecode ? `<a class="btn" href="${esc(p.makecode)}" target="_blank" rel="noopener">${icon("external")}פתיחה ב-MakeCode</a>` : ""}
+          ${p.makecode ? `<a class="btn" href="${esc(makecodeUrl(p.makecode))}" target="_blank" rel="noopener">${icon("external")}פתיחה ב-MakeCode</a>` : ""}
           ${p.hex ? `<a class="btn secondary" href="${esc(p.hex)}" download>${icon("download")}הורדת קובץ HEX</a>` : ""}
         </div>
       </div>`
