@@ -37,7 +37,7 @@ function esc(s) {
 function fmt(s) {
   return esc(s)
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\[\[(.+?)\]\]/g, '<code class="block-name">$1</code>');
+    .replace(/\[\[(.+?)\]\]/g, '<code class="block-name" dir="auto">$1</code>');
 }
 // Same text with the markup stripped, for search and snippets.
 function plain(s) {
